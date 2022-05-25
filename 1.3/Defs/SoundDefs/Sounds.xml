@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<SoundDef>
+		<defName>HLCRC_SelectPawnOne</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/On1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/SelectPawn1</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/SelectPawn2</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/SelectPawn3</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/SelectPawn4</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/SelectPawn5</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Off1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>HLCRC_SelectPawnTwo</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/On2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/SelectPawn1</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/SelectPawn2</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/SelectPawn3</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/SelectPawn4</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/SelectPawn5</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Off2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>HLCRC_AttackOne</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/On1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Attack1</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Attack2</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Attack3</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Attack4</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Attack5</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Off1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>HLCRC_AttackTwo</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/On2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Attack1</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Attack2</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Attack3</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Attack4</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Attack5</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Off2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>HLCRC_MovingOne</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/On1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Moving1</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Moving2</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Moving3</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Moving4</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Moving5</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Off1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>HLCRC_MovingTwo</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/On2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Moving1</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Moving2</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Moving3</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Moving4</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Moving5</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Off2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>HLCRC_PawnIsDownedOne</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/On1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/PawnIsDowned1</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/PawnIsDowned2</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/PawnIsDowned3</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Off1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>HLCRC_PawnIsDownedTwo</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/On2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/PawnIsDowned1</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/PawnIsDowned2</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/PawnIsDowned3</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Off2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>HLCRC_PawnIsHurtOne</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/On1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/PawnIsHurt1</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/PawnIsHurt2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Off1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>HLCRC_PawnIsHurtTwo</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/On2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/PawnIsHurt1</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/PawnIsHurt2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Off2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>HLCRC_PawnGetsInfectionOne</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/On1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/PawnGetsInfection</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Off1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>HLCRC_PawnGetsInfectionTwo</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/On2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/PawnGetsInfection</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Off2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>HLCRC_HittingOrDowningEnemyOne</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/On1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/HittingOrDowningEnemy</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Off1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>HLCRC_HittingOrDowningEnemyTwo</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/On2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/HittingOrDowningEnemy</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Off2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>HLCRC_FormCaravan</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>      
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>EventSound/FormCaravan</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>HLCRC_MentalBreak</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>      
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>EventSound/MentalBreak</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>HLCRC_TransportCrash</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>      
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>EventSound/TransportCrash</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>HLCRC_Zzzt</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>      
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>EventSound/Zzzt</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>HLCRC_Arrested</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>      
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>EventSound/Arrested</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>HLCRC_Betrayal</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>      
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>EventSound/Betrayal</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>HLCRC_SolarFlare</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>      
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>EventSound/SolarFlare1</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>EventSound/SolarFlare2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>HLCRC_WarMusicLoopDropPods</defName>
+		<context>MapOnly</context>
+		<sustain>True</sustain>
+		<maxSimultaneous>1</maxSimultaneous>
+		<maxVoices>1</maxVoices>
+		<priorityMode>PrioritizeNearest</priorityMode>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>      
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>WarMusic/WarMusicLoopDropPods</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+				<sustainLoopDurationRange>30</sustainLoopDurationRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>HLCRC_WarMusicLoopHumanRaid</defName>
+		<context>MapOnly</context>
+		<sustain>True</sustain>
+		<maxSimultaneous>1</maxSimultaneous>
+		<maxVoices>1</maxVoices>
+		<priorityMode>PrioritizeNearest</priorityMode>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>      
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>EventSound/HumanRaid1</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>EventSound/HumanRaid2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+				<sustainLoop>false</sustainLoop>
+			</li>
+			<li>
+				<onCamera>True</onCamera>      
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>WarMusic/WarMusicLoopHumanRaid</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+				<sustainLoopDurationRange>30</sustainLoopDurationRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>HLCRC_WarMusicLoopInfestation</defName>
+		<context>MapOnly</context>
+		<sustain>True</sustain>
+		<maxSimultaneous>1</maxSimultaneous>
+		<maxVoices>1</maxVoices>
+		<priorityMode>PrioritizeNearest</priorityMode>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>      
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>EventSound/Infestation1</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>EventSound/Infestation2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+				<sustainLoop>false</sustainLoop>
+			</li>
+			<li>
+				<onCamera>True</onCamera>      
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>WarMusic/WarMusicLoopInfestation</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+				<sustainLoopDurationRange>30</sustainLoopDurationRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>HLCRC_WarMusicLoopMechanoidRaid</defName>
+		<context>MapOnly</context>
+		<sustain>True</sustain>
+		<maxSimultaneous>1</maxSimultaneous>
+		<maxVoices>1</maxVoices>
+		<priorityMode>PrioritizeNearest</priorityMode>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>      
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>EventSound/MechanoidEvent</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+				<sustainLoop>false</sustainLoop>
+			</li>
+			<li>
+				<onCamera>True</onCamera>      
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>WarMusic/WarMusicLoopMechanoidRaid</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+				<sustainLoopDurationRange>30</sustainLoopDurationRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>HLCRC_WarMusicManhunter</defName>
+		<context>MapOnly</context>
+		<sustain>True</sustain>
+		<maxSimultaneous>1</maxSimultaneous>
+		<maxVoices>1</maxVoices>
+		<priorityMode>PrioritizeNearest</priorityMode>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>      
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>WarMusic/WarMusicManhunter</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+				<sustainLoopDurationRange>30</sustainLoopDurationRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+</Defs>
