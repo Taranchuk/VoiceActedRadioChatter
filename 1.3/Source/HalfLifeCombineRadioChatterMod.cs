@@ -99,7 +99,7 @@ namespace HalfLifeCombineRadioChatter
                 var storedAction = __result;
                 __result = delegate
                 {
-                    if (Rand.Chance(0.45f))
+                    if (Rand.Chance(0.2f))
                     {
                         var def = Rand.Bool ? HL_DefOf.HLCRC_AttackOne : HL_DefOf.HLCRC_AttackTwo;
                         def.PlayOneShot(pawn);
@@ -122,7 +122,7 @@ namespace HalfLifeCombineRadioChatter
                 var storedAction = __result;
                 __result = delegate
                 {
-                    if (Rand.Chance(0.45f))
+                    if (Rand.Chance(0.2f))
                     {
                         var def = Rand.Bool ? HL_DefOf.HLCRC_AttackOne : HL_DefOf.HLCRC_AttackTwo;
                         def.PlayOneShot(pawn);
@@ -177,6 +177,10 @@ namespace HalfLifeCombineRadioChatter
             {
                 if (pawn.IsColonist)
                 {
+                    if (dinfo.Instigator != null && dinfo.Instigator.Faction == pawn.Faction)
+                    {
+                        return;
+                    }
                     if (Rand.Chance(0.2f))
                     {
                         var def = Rand.Bool ? HL_DefOf.HLCRC_PawnIsHurtOne : HL_DefOf.HLCRC_PawnIsHurtTwo;
@@ -284,28 +288,28 @@ namespace HalfLifeCombineRadioChatter
         }
     }
 
-    [HarmonyPatch(typeof(ShortCircuitUtility), "DoShortCircuit")]
-    public static class ShortCircuitUtility_DoShortCircuit_Patch
-    {
-        public static void Postfix()
-        {
-            HL_DefOf.HLCRC_Zzzt.PlayOneShotOnCamera();
-        }
-    }
-
-    [HarmonyPatch(typeof(IncidentWorker_Infestation), "TryExecuteWorker")]
-    public static class IncidentWorker_Infestation_TryExecuteWorker_Patch
-    {
-        public static void Postfix(IncidentParms parms)
-        {
-            if (parms.target is Map map)
-            {
-                var sus = HL_DefOf.HLCRC_WarMusicLoopInfestation.TrySpawnSustainer(SoundInfo.OnCamera());
-                var comp = map.GetComponent<MapComponent_WarMusic>();
-                comp.AddSustainer(sus);
-            }
-        }
-    }
+    //[HarmonyPatch(typeof(ShortCircuitUtility), "DoShortCircuit")]
+    //public static class ShortCircuitUtility_DoShortCircuit_Patch
+    //{
+    //    public static void Postfix()
+    //    {
+    //        HL_DefOf.HLCRC_Zzzt.PlayOneShotOnCamera();
+    //    }
+    //}
+    //
+    //[HarmonyPatch(typeof(IncidentWorker_Infestation), "TryExecuteWorker")]
+    //public static class IncidentWorker_Infestation_TryExecuteWorker_Patch
+    //{
+    //    public static void Postfix(IncidentParms parms)
+    //    {
+    //        if (parms.target is Map map)
+    //        {
+    //            var sus = HL_DefOf.HLCRC_WarMusicLoopInfestation.TrySpawnSustainer(SoundInfo.OnCamera());
+    //            var comp = map.GetComponent<MapComponent_WarMusic>();
+    //            comp.AddSustainer(sus);
+    //        }
+    //    }
+    //}
 
     [HarmonyPatch(typeof(ManhunterPackIncidentUtility), "GenerateAnimals")]
     public static class ManhunterPackIncidentUtility_GenerateAnimals_Patch
@@ -363,7 +367,7 @@ namespace HalfLifeCombineRadioChatter
     {
         public static void Postfix(SubSustainer __instance)
         {
-            Log.Message("Starting " + __instance.parent?.def);
+            Log.Message("Starting " + __instance.parent?.def + " - " + __instance.nextSampleStartTime);
         }
     }
 }

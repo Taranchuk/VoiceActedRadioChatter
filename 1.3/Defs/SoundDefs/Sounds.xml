@@ -728,6 +728,7 @@
 				<volumeRange>42</volumeRange>
 				<distRange>20~50</distRange>
 				<sustainLoopDurationRange>30</sustainLoopDurationRange>
+				<startDelayRange>3</startDelayRange>
 			</li>
 		</subSounds>
 	</SoundDef>
@@ -764,6 +765,7 @@
 				<volumeRange>42</volumeRange>
 				<distRange>20~50</distRange>
 				<sustainLoopDurationRange>30</sustainLoopDurationRange>
+				<startDelayRange>3</startDelayRange>
 			</li>
 		</subSounds>
 	</SoundDef>
@@ -800,6 +802,7 @@
 				<volumeRange>42</volumeRange>
 				<distRange>20~50</distRange>
 				<sustainLoopDurationRange>30</sustainLoopDurationRange>
+				<startDelayRange>3</startDelayRange>
 			</li>
 		</subSounds>
 	</SoundDef>
@@ -833,6 +836,7 @@
 				<volumeRange>42</volumeRange>
 				<distRange>20~50</distRange>
 				<sustainLoopDurationRange>30</sustainLoopDurationRange>
+				<startDelayRange>3</startDelayRange>
 			</li>
 		</subSounds>
 	</SoundDef>
