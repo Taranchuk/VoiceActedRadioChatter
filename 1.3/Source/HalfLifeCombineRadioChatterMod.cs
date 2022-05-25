@@ -1,5 +1,6 @@
 ﻿using HarmonyLib;
 using RimWorld;
+using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,10 +8,50 @@ using System.Security.Cryptography;
 using UnityEngine;
 using Verse;
 using Verse.AI;
+using Verse.Noise;
 using Verse.Sound;
 
 namespace HalfLifeCombineRadioChatter
 {
+    public class MapComponent_WarMusic : MapComponent
+    {
+        public Dictionary<Sustainer, long> sustainersByTick = new Dictionary<Sustainer, long>();
+        public MapComponent_WarMusic(Map map) : base(map)
+        {
+        }
+
+        public static long GetCurrentSeconds
+        {
+            get
+            {
+                var dt = DateTime.Now;
+                var ticks = dt.Ticks;
+                var seconds = ticks / TimeSpan.TicksPerSecond;
+                return seconds;
+            }
+        }
+        public void AddSustainer(Sustainer sustainer)
+        {
+
+            if (sustainersByTick is null)
+            {
+                sustainersByTick = new Dictionary<Sustainer, long>();
+            }
+            sustainersByTick[sustainer] = GetCurrentSeconds + 30;
+        }
+        public override void MapComponentTick()
+        {
+            base.MapComponentTick();
+            foreach (var key in sustainersByTick.Keys.ToList())
+            {
+                if (GetCurrentSeconds >= sustainersByTick[key])
+                {
+                    key.End();
+                    sustainersByTick.Remove(key);
+                }
+            }
+        }
+    }
     public class HalfLifeCombineRadioChatterMod : Mod
     {
         public HalfLifeCombineRadioChatterMod(ModContentPack pack) : base(pack)
@@ -187,25 +228,27 @@ namespace HalfLifeCombineRadioChatter
     {
         public static void Postfix(IncidentParms parms)
         {
-            if (parms.faction != null && parms.faction.HostileTo(Faction.OfPlayer))
+            if (parms.faction != null && parms.faction.HostileTo(Faction.OfPlayer) && parms.target is Map map)
             {
+                var comp = map.GetComponent<MapComponent_WarMusic>();
                 var worker = parms.raidArrivalMode.Worker;
                 if (worker is PawnsArrivalModeWorker_CenterDrop || worker is PawnsArrivalModeWorker_EdgeDrop 
                     || worker is PawnsArrivalModeWorker_EdgeDropGroups || worker is PawnsArrivalModeWorker_RandomDrop)
                 {
                     var sus = HL_DefOf.HLCRC_WarMusicLoopDropPods.TrySpawnSustainer(SoundInfo.OnCamera());
-                    sus.endRealTime = Time.realtimeSinceStartup + 3;
+                    comp.AddSustainer(sus);
                 }
                 else
                 {
                     if (parms.faction.def.humanlikeFaction)
                     {
                         var sus = HL_DefOf.HLCRC_WarMusicLoopHumanRaid.TrySpawnSustainer(SoundInfo.OnCamera());
-                        sus.endRealTime = Time.realtimeSinceStartup + 3;
+                        comp.AddSustainer(sus);
                     }
                     else if (parms.faction == Faction.OfMechanoids)
                     {
-                        HL_DefOf.HLCRC_WarMusicLoopMechanoidRaid.TrySpawnSustainer(SoundInfo.OnCamera());
+                        var sus = HL_DefOf.HLCRC_WarMusicLoopMechanoidRaid.TrySpawnSustainer(SoundInfo.OnCamera());
+                        comp.AddSustainer(sus);
                     }
                 }
             }
@@ -253,19 +296,29 @@ namespace HalfLifeCombineRadioChatter
     [HarmonyPatch(typeof(IncidentWorker_Infestation), "TryExecuteWorker")]
     public static class IncidentWorker_Infestation_TryExecuteWorker_Patch
     {
-        public static void Postfix()
+        public static void Postfix(IncidentParms parms)
         {
-            HL_DefOf.HLCRC_WarMusicLoopInfestation.TrySpawnSustainer(SoundInfo.OnCamera());
+            if (parms.target is Map map)
+            {
+                var sus = HL_DefOf.HLCRC_WarMusicLoopInfestation.TrySpawnSustainer(SoundInfo.OnCamera());
+                var comp = map.GetComponent<MapComponent_WarMusic>();
+                comp.AddSustainer(sus);
+            }
         }
     }
 
     [HarmonyPatch(typeof(ManhunterPackIncidentUtility), "GenerateAnimals")]
     public static class ManhunterPackIncidentUtility_GenerateAnimals_Patch
     {
-        public static void Postfix()
+        public static void Postfix(PawnKindDef animalKind, int tile, float points, int animalCount = 0)
         {
-            var sus = HL_DefOf.HLCRC_WarMusicManhunter.TrySpawnSustainer(SoundInfo.OnCamera());
-            sus.endRealTime = Time.realtimeSinceStartup + 30;
+            var mapParent = Find.World.worldObjects.ObjectsAt(tile).OfType<MapParent>().FirstOrDefault(x => x.Map != null);
+            if (mapParent != null)
+            {
+                var sus = HL_DefOf.HLCRC_WarMusicManhunter.TrySpawnSustainer(SoundInfo.OnCamera());
+                var comp = mapParent.Map.GetComponent<MapComponent_WarMusic>();
+                comp.AddSustainer(sus);
+            }
         }
     }
 
