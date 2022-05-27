@@ -215,7 +215,7 @@ namespace HalfLifeCombineRadioChatter
                         return;
                     }
                     var def = Rand.Bool ? HL_DefOf.HLCRC_PawnIsHurtOne : HL_DefOf.HLCRC_PawnIsHurtTwo;
-                    GameComponent_WarMusic.Instance.AddSound(def, 0.2f, Rand.RangeInclusive(1, 3), pawn);
+                    GameComponent_WarMusic.Instance.AddSound(def, 0.2f, Rand.RangeInclusive(2, 4), pawn);
                 }
                 else if (dinfo.Instigator is Pawn attacker && attacker.IsColonist)
                 {
