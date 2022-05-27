@@ -47,11 +47,7 @@ namespace HalfLifeCombineRadioChatter
             if (Rand.Chance(chance))
             {
                 var baseDefName = soundDef.defName.Replace("One", "").Replace("Two", "");
-                if (!lastFiredSounds.TryGetValue(baseDefName, out var lastFiredSecond))
-                {
-                    lastFiredSounds.Add(baseDefName, GetCurrentSeconds);
-                }
-                else if (GetCurrentSeconds - lastFiredSecond < secondsCooldown)
+                if (lastFiredSounds.TryGetValue(baseDefName, out var lastFiredSecond) && GetCurrentSeconds - lastFiredSecond < secondsCooldown)
                 {
                     return;
                 }
@@ -63,6 +59,7 @@ namespace HalfLifeCombineRadioChatter
                 {
                     soundDef.PlayOneShotOnCamera();
                 }
+                lastFiredSounds.Add(baseDefName, GetCurrentSeconds);
             }
         }
         public void AddSustainer(Sustainer sustainer)
