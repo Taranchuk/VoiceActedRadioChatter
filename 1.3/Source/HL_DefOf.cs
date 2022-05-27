@@ -23,6 +23,8 @@ namespace HalfLifeCombineRadioChatter
         public static SoundDef HLCRC_PawnGetsInfectionTwo;
         public static SoundDef HLCRC_HittingOrDowningEnemyOne;
         public static SoundDef HLCRC_HittingOrDowningEnemyTwo;
+        public static SoundDef HLCRC_ColonistDeathOne;
+        public static SoundDef HLCRC_ColonistDeathTwo;
         public static SoundDef HLCRC_FormCaravan;
         public static SoundDef HLCRC_MentalBreak;
         public static SoundDef HLCRC_TransportCrash;
@@ -31,9 +33,15 @@ namespace HalfLifeCombineRadioChatter
         public static SoundDef HLCRC_Arrested;
         public static SoundDef HLCRC_Betrayal;
         public static SoundDef HLCRC_WarMusicLoopDropPods;
+        public static SoundDef HLCRC_HumanRaidEvent;
+        public static SoundDef HLCRC_InfestationEvent;
+        public static SoundDef HLCRC_WarMusicManhunter;
+        public static SoundDef HLCRC_ToxicSpewer;
+        public static SoundDef HLCRC_ToxicFallout;
         public static SoundDef HLCRC_WarMusicLoopHumanRaid;
         public static SoundDef HLCRC_WarMusicLoopInfestation;
         public static SoundDef HLCRC_WarMusicLoopMechanoidRaid;
-        public static SoundDef HLCRC_WarMusicManhunter;
+        public static IncidentDef ProblemCauser;
+        public static IncidentDef DefoliatorShipPartCrash;
     }
 }
