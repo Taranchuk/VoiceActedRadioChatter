@@ -9,22 +9,6 @@ namespace HalfLifeCombineRadioChatter
     [DefOf]
     public static class HL_DefOf
     {
-        public static SoundDef HLCRC_SelectPawnOne;
-        public static SoundDef HLCRC_SelectPawnTwo;
-        public static SoundDef HLCRC_AttackOne;
-        public static SoundDef HLCRC_AttackTwo;
-        public static SoundDef HLCRC_MovingOne;
-        public static SoundDef HLCRC_MovingTwo;
-        public static SoundDef HLCRC_PawnIsDownedOne;
-        public static SoundDef HLCRC_PawnIsDownedTwo;
-        public static SoundDef HLCRC_PawnIsHurtOne;
-        public static SoundDef HLCRC_PawnIsHurtTwo;
-        public static SoundDef HLCRC_PawnGetsInfectionOne;
-        public static SoundDef HLCRC_PawnGetsInfectionTwo;
-        public static SoundDef HLCRC_HittingOrDowningEnemyOne;
-        public static SoundDef HLCRC_HittingOrDowningEnemyTwo;
-        public static SoundDef HLCRC_ColonistDeathOne;
-        public static SoundDef HLCRC_ColonistDeathTwo;
         public static SoundDef HLCRC_FormCaravan;
         public static SoundDef HLCRC_MentalBreak;
         public static SoundDef HLCRC_TransportCrash;

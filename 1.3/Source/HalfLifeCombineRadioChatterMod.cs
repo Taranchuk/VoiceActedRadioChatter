@@ -32,34 +32,68 @@ namespace HalfLifeCombineRadioChatter
                 return seconds;
             }
         }
+        public bool CanPlaySound(string defName, Pawn pawn, int secondsCooldown)
+        {
+            var def = GetBaseSoundDefFor(defName, pawn);
+            if (def != null)
+            {
+                return CanPlaySound(def, secondsCooldown);
+            }
+            return false;
+        }
 
         public bool CanPlaySound(SoundDef soundDef, int secondsCooldown)
         {
             var baseDefName = soundDef.defName.Replace("One", "").Replace("Two", "");
+            if (lastFiredSounds is null)
+            {
+                lastFiredSounds = new Dictionary<string, long>();
+            }
             if (!lastFiredSounds.TryGetValue(baseDefName, out var lastFiredSecond) || GetCurrentSeconds - lastFiredSecond > secondsCooldown)
             {
                 return true;
             }
             return false;
         }
-        public void AddSound(SoundDef soundDef, float chance, int secondsCooldown, Thing source)
+
+        public SoundDef GetBaseSoundDefFor(string defName, Pawn pawn)
+        {
+            var prefix = "HLCRC_";
+            var gender = pawn.gender == Gender.Male ? "Male" : "Female";
+            var num = Rand.ChanceSeeded(0.5f, pawn.thingIDNumber) ? "1" : "2";
+            var combinedDefName = prefix + gender + num + defName + (Rand.Bool ? "One" : "Two");
+            return DefDatabase<SoundDef>.GetNamedSilentFail(combinedDefName);
+        }
+
+        public void AddSound(string defName, Pawn pawn, float chance, int secondsCooldown, Thing source)
+        {
+            var def = GetBaseSoundDefFor(defName, pawn);
+            if (def != null)
+            {
+                AddSound(defName, def, chance, secondsCooldown, source);
+            }
+        }
+        private void AddSound(string baseDefName, SoundDef soundDef, float chance, int secondsCooldown, Thing source)
         {
             if (Rand.Chance(chance))
             {
-                var baseDefName = soundDef.defName.Replace("One", "").Replace("Two", "");
+                if (lastFiredSounds is null)
+                {
+                    lastFiredSounds = new Dictionary<string, long>();
+                }
                 if (lastFiredSounds.TryGetValue(baseDefName, out var lastFiredSecond) && GetCurrentSeconds - lastFiredSecond < secondsCooldown)
                 {
                     return;
                 }
                 if (source != null)
                 {
-                    soundDef.PlayOneShot(source);
+                    soundDef.PlayOneShot(new TargetInfo(source.PositionHeld, source.MapHeld));
                 }
                 else
                 {
                     soundDef.PlayOneShotOnCamera();
                 }
-                lastFiredSounds.Add(baseDefName, GetCurrentSeconds);
+                lastFiredSounds[baseDefName] = GetCurrentSeconds;
             }
         }
         public void AddSustainer(Sustainer sustainer)
@@ -73,12 +107,15 @@ namespace HalfLifeCombineRadioChatter
         public override void GameComponentTick()
         {
             base.GameComponentTick();
-            foreach (var key in sustainersByTick.Keys.ToList())
+            if (sustainersByTick != null)
             {
-                if (GetCurrentSeconds >= sustainersByTick[key])
+                foreach (var key in sustainersByTick.Keys.ToList())
                 {
-                    key.End();
-                    sustainersByTick.Remove(key);
+                    if (GetCurrentSeconds >= sustainersByTick[key])
+                    {
+                        key.End();
+                        sustainersByTick.Remove(key);
+                    }
                 }
             }
         }
@@ -107,7 +144,7 @@ namespace HalfLifeCombineRadioChatter
             __state = false;
             if (prevFrame != Time.frameCount && obj is Pawn pawn && pawn.IsColonist)
             {
-                if (GameComponent_WarMusic.Instance.CanPlaySound(HL_DefOf.HLCRC_SelectPawnOne, 3))
+                if (GameComponent_WarMusic.Instance.CanPlaySound("SelectPawn", pawn, 3))
                 {
                     playSound = false;
                     __state = true;
@@ -120,12 +157,10 @@ namespace HalfLifeCombineRadioChatter
             if (__state)
             {
                 var pawn = obj as Pawn;
-                var def = Rand.Bool ? HL_DefOf.HLCRC_SelectPawnOne : HL_DefOf.HLCRC_SelectPawnTwo;
-                GameComponent_WarMusic.Instance.AddSound(def, 1f, Rand.RangeInclusive(1, 3), pawn);
+                GameComponent_WarMusic.Instance.AddSound("SelectPawn", pawn, 1f, Rand.RangeInclusive(1, 3), pawn);
             }
         }
     }
-
 
     [HarmonyPatch(typeof(FloatMenuUtility), "GetRangedAttackAction")]
     public static class FloatMenuUtility_GetRangedAttackAction_Patch
@@ -138,8 +173,7 @@ namespace HalfLifeCombineRadioChatter
                 var storedAction = __result;
                 __result = delegate
                 {
-                    var def = Rand.Bool ? HL_DefOf.HLCRC_AttackOne : HL_DefOf.HLCRC_AttackTwo;
-                    GameComponent_WarMusic.Instance.AddSound(def, 1f, Rand.RangeInclusive(1, 3), pawn);
+                    GameComponent_WarMusic.Instance.AddSound("Attack", pawn, 1f, Rand.RangeInclusive(1, 3), pawn);
                     storedAction();
                 };
             }
@@ -158,8 +192,7 @@ namespace HalfLifeCombineRadioChatter
                 var storedAction = __result;
                 __result = delegate
                 {
-                    var def = Rand.Bool ? HL_DefOf.HLCRC_AttackOne : HL_DefOf.HLCRC_AttackTwo;
-                    GameComponent_WarMusic.Instance.AddSound(def, 1f, Rand.RangeInclusive(1, 3), pawn);
+                    GameComponent_WarMusic.Instance.AddSound("Attack", pawn, 1f, Rand.RangeInclusive(1, 3), pawn);
                     storedAction();
                 };
             }
@@ -175,8 +208,7 @@ namespace HalfLifeCombineRadioChatter
         {
             if (prevFrame != Time.frameCount && pawn.IsColonist)
             {
-                var def = Rand.Bool ? HL_DefOf.HLCRC_MovingOne : HL_DefOf.HLCRC_MovingTwo;
-                GameComponent_WarMusic.Instance.AddSound(def, 1f, Rand.RangeInclusive(1, 3), pawn);
+                GameComponent_WarMusic.Instance.AddSound("Moving", pawn, 1f, Rand.RangeInclusive(1, 3), pawn);
             }
             prevFrame = Time.frameCount;
         }
@@ -191,8 +223,7 @@ namespace HalfLifeCombineRadioChatter
             {
                 if (Rand.Chance(0.2f))
                 {
-                    var def = Rand.Bool ? HL_DefOf.HLCRC_PawnIsDownedOne : HL_DefOf.HLCRC_PawnIsDownedTwo;
-                    def.PlayOneShot(___pawn);
+                    GameComponent_WarMusic.Instance.AddSound("PawnIsDowned", ___pawn, 1f, 0, ___pawn);
                 }
             }
         }
@@ -207,17 +238,16 @@ namespace HalfLifeCombineRadioChatter
             {
                 if (pawn.IsColonist)
                 {
-                    if (dinfo.Instigator != null && dinfo.Instigator.Faction == pawn.Faction)
-                    {
-                        return;
-                    }
-                    var def = Rand.Bool ? HL_DefOf.HLCRC_PawnIsHurtOne : HL_DefOf.HLCRC_PawnIsHurtTwo;
-                    GameComponent_WarMusic.Instance.AddSound(def, 0.2f, Rand.RangeInclusive(2, 4), pawn);
+                    //if (dinfo.Instigator != null && dinfo.Instigator.Faction == pawn.Faction)
+                    //{
+                    //    return;
+                    //}
+                    //var def = Rand.Bool ? HL_DefOf.HLCRC_PawnIsHurtOne : HL_DefOf.HLCRC_PawnIsHurtTwo;
+                    //GameComponent_WarMusic.Instance.AddSound(def, 0.2f, Rand.RangeInclusive(2, 4), pawn);
                 }
                 else if (dinfo.Instigator is Pawn attacker && attacker.IsColonist)
                 {
-                    var def = Rand.Bool ? HL_DefOf.HLCRC_HittingOrDowningEnemyOne : HL_DefOf.HLCRC_HittingOrDowningEnemyTwo;
-                    GameComponent_WarMusic.Instance.AddSound(def, 0.2f, Rand.RangeInclusive(1, 3), attacker);
+                    GameComponent_WarMusic.Instance.AddSound("HittingOrDowningEnemy", attacker, 1f, Rand.RangeInclusive(5, 7), attacker);
                 }
             }
         }
@@ -230,8 +260,7 @@ namespace HalfLifeCombineRadioChatter
         {
             if (__instance.Dead && __instance.IsColonist)
             {
-                var def = Rand.Bool ? HL_DefOf.HLCRC_ColonistDeathOne : HL_DefOf.HLCRC_ColonistDeathTwo;
-                def.PlayOneShot(new TargetInfo(__instance.PositionHeld, __instance.MapHeld));
+                GameComponent_WarMusic.Instance.AddSound("ColonistDeath", __instance, 1f, 0, __instance);
             }
         }
     }
