@@ -58,10 +58,7 @@ namespace HalfLifeCombineRadioChatter
 
         public SoundDef GetBaseSoundDefFor(string defName, Pawn pawn)
         {
-            var prefix = "HLCRC_";
-            var gender = pawn.gender == Gender.Male ? "Male" : "Female";
-            var num = Rand.ChanceSeeded(0.5f, pawn.thingIDNumber) ? "1" : "2";
-            var combinedDefName = prefix + gender + num + defName + (Rand.Bool ? "One" : "Two");
+            var combinedDefName = HalfLifeCombineRadioChatterMod.Prefix + HalfLifeCombineRadioChatterMod.GetVoiceFor(pawn) + defName + (Rand.Bool ? "One" : "Two");
             return DefDatabase<SoundDef>.GetNamedSilentFail(combinedDefName);
         }
 
@@ -127,13 +124,125 @@ namespace HalfLifeCombineRadioChatter
             Scribe_Collections.Look(ref lastFiredSounds, "lastFiredSounds", LookMode.Value, LookMode.Value);
         }
     }
-    public class HalfLifeCombineRadioChatterMod : Mod
+
+    [StaticConstructorOnStartup]
+    public static class HalfLifeCombineRadioChatterStartup
     {
-        public HalfLifeCombineRadioChatterMod(ModContentPack pack) : base(pack)
+        static HalfLifeCombineRadioChatterStartup()
         {
-            new Harmony("HalfLifeCombineRadioChatter.Mod").PatchAll();
+            ApplySettings();
+        }
+
+        public static void ApplySettings()
+        {
+            var sounds = DefDatabase<SoundDef>.AllDefsListForReading.ListFullCopy();
+            foreach (var sound in sounds)
+            {
+                foreach (var disabledActor in HalfLifeCombineRadioChatterSettings.disabledVoiceActors)
+                {
+                    if (sound.defName.StartsWith(HalfLifeCombineRadioChatterMod.Prefix + disabledActor))
+                    {
+                        DefDatabase<SoundDef>.Remove(sound);
+                    }
+                }
+            }
         }
     }
+    public class HalfLifeCombineRadioChatterMod : Mod
+    {
+        public const string Prefix = "HLCRC_";
+
+        public static List<string> voiceActors = new List<string>
+        {
+            "Female1",
+            "Female2",
+            "Male1",
+            "Male2"
+        };
+
+        public static string GetVoiceFor(Pawn pawn)
+        {
+            var gender = pawn.gender == Gender.Male ? "Male" : "Female";
+            var voicePool = voiceActors.Where(x => x.StartsWith(gender)).ToList();
+            var availableVoices = new List<string>();
+            foreach (var voiceActor in voicePool)
+            {
+                if (!HalfLifeCombineRadioChatterSettings.disabledVoiceActors.Contains(voiceActor))
+                {
+                    availableVoices.Add(voiceActor);
+                }
+            }
+            Rand.PushState(pawn.thingIDNumber);
+            if (availableVoices.TryRandomElement(out var voice))
+            {
+                Rand.PopState();
+                return voice;
+            }
+            Rand.PopState();
+            return "";
+        }
+
+        public static HalfLifeCombineRadioChatterSettings settings;
+        public HalfLifeCombineRadioChatterMod(ModContentPack pack) : base(pack)
+        {
+            settings = GetSettings<HalfLifeCombineRadioChatterSettings>();
+            new Harmony("HalfLifeCombineRadioChatter.Mod").PatchAll();
+        }
+        public override void DoSettingsWindowContents(Rect inRect)
+        {
+            base.DoSettingsWindowContents(inRect);
+            settings.DoSettingsWindowContents(inRect);
+        }
+        public override string SettingsCategory()
+        {
+            return this.Content.Name;
+        }
+
+        public override void WriteSettings()
+        {
+            base.WriteSettings();
+            HalfLifeCombineRadioChatterStartup.ApplySettings();
+        }
+    }
+
+    public class HalfLifeCombineRadioChatterSettings : ModSettings
+    {
+
+        public static List<string> disabledVoiceActors = new List<string>();
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Collections.Look(ref disabledVoiceActors, "disabledVoiceActors");
+        }
+        public void DoSettingsWindowContents(Rect inRect)
+        {
+            Rect rect = new Rect(inRect.x, inRect.y, inRect.width, inRect.height);
+            Listing_Standard listingStandard = new Listing_Standard();
+            listingStandard.Begin(rect);
+            listingStandard.Label("HLCRC.EnableDisableVoiceActors".Translate());
+            foreach (var actor in HalfLifeCombineRadioChatterMod.voiceActors)
+            {
+                var enabled = disabledVoiceActors.Contains(actor) is true;
+                listingStandard.CheckboxLabeled(actor, ref enabled);
+                if (enabled)
+                {
+                    if (disabledVoiceActors.Contains(actor))
+                    {
+                        disabledVoiceActors.Remove(actor);
+                    }
+                }
+                else
+                {
+                    if (!disabledVoiceActors.Contains(actor))
+                    {
+                        disabledVoiceActors.Add(actor);
+                    }
+                }
+            }
+            listingStandard.End();
+        }
+    }
+
 
     [HarmonyPatch(typeof(Selector), "SelectInternal")]
     public static class Selector_SelectInternal_Patch
