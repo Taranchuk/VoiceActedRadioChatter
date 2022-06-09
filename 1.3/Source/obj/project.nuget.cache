@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YjfcQ++4PAGKNb8m7Uumas7emRa6AoGzLQMcy7swicgkUEk/w8jSKx9j/oMfTDjaxN99R5JSh5Jk/ZcGSv3JbA==",
+  "dgSpecHash": "J30Sp+Eqyd82igBWxAnFmiA0dTioLANktzqT+2AimYZ+tn+R8tXIoCwcg9CoPn1nTgg08XXxfRSx+to/PxEtWg==",
   "success": true,
-  "projectFilePath": "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Half-Life-Combine-radio-chatter\\1.3\\Source\\VoiceActedRadioChatter.csproj",
+  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VoiceActedRadioChatter\\1.3\\Source\\VoiceActedRadioChatter.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vova\\.nuget\\packages\\krafs.publicizer\\1.0.2\\krafs.publicizer.1.0.2.nupkg.sha512",
     "C:\\Users\\Vova\\.nuget\\packages\\krafs.rimworld.ref\\1.3.3326\\krafs.rimworld.ref.1.3.3326.nupkg.sha512",
