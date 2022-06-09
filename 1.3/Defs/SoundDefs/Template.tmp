@@ -9,7 +9,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male1Voice/On1</clipPath>
+						<clipPath>UnitResponse/On1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -48,7 +48,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male1Voice/Off1</clipPath>
+						<clipPath>UnitResponse/Off1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -65,7 +65,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male1Voice/On2</clipPath>
+						<clipPath>UnitResponse/On2</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -104,7 +104,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male1Voice/Off2</clipPath>
+						<clipPath>UnitResponse/Off2</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -121,7 +121,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male1Voice/On1</clipPath>
+						<clipPath>UnitResponse/On1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -151,7 +151,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male1Voice/Off1</clipPath>
+						<clipPath>UnitResponse/Off1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -168,7 +168,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male1Voice/On2</clipPath>
+						<clipPath>UnitResponse/On2</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -198,7 +198,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male1Voice/Off2</clipPath>
+						<clipPath>UnitResponse/Off2</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -215,7 +215,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male1Voice/On1</clipPath>
+						<clipPath>UnitResponse/On1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -251,7 +251,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male1Voice/Off1</clipPath>
+						<clipPath>UnitResponse/Off1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -268,7 +268,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male1Voice/On2</clipPath>
+						<clipPath>UnitResponse/On2</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -304,7 +304,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male1Voice/Off2</clipPath>
+						<clipPath>UnitResponse/Off2</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -321,7 +321,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male1Voice/On1</clipPath>
+						<clipPath>UnitResponse/On1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -345,7 +345,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male1Voice/Off1</clipPath>
+						<clipPath>UnitResponse/Off1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -362,7 +362,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male1Voice/On2</clipPath>
+						<clipPath>UnitResponse/On2</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -386,7 +386,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male1Voice/Off2</clipPath>
+						<clipPath>UnitResponse/Off2</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -403,7 +403,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male1Voice/On1</clipPath>
+						<clipPath>UnitResponse/On1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -430,7 +430,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male1Voice/Off1</clipPath>
+						<clipPath>UnitResponse/Off1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -447,7 +447,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male1Voice/On2</clipPath>
+						<clipPath>UnitResponse/On2</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -474,7 +474,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male1Voice/Off2</clipPath>
+						<clipPath>UnitResponse/Off2</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -491,7 +491,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male1Voice/On1</clipPath>
+						<clipPath>UnitResponse/On1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -515,7 +515,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male1Voice/Off1</clipPath>
+						<clipPath>UnitResponse/Off1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -532,7 +532,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male1Voice/On2</clipPath>
+						<clipPath>UnitResponse/On2</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -556,7 +556,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male1Voice/Off2</clipPath>
+						<clipPath>UnitResponse/Off2</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
