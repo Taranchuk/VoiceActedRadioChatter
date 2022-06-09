@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Half-Life-Combine-radio-chatter\\1.3\\Source\\VoiceActedRadioChatter.csproj": {}
+    "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Half-Life-Combine-radio-chatter\\1.3\\Source\\VoiceActedRadioChatter.csproj": {}
   },
   "projects": {
-    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Half-Life-Combine-radio-chatter\\1.3\\Source\\VoiceActedRadioChatter.csproj": {
+    "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Half-Life-Combine-radio-chatter\\1.3\\Source\\VoiceActedRadioChatter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Half-Life-Combine-radio-chatter\\1.3\\Source\\VoiceActedRadioChatter.csproj",
+        "projectUniqueName": "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Half-Life-Combine-radio-chatter\\1.3\\Source\\VoiceActedRadioChatter.csproj",
         "projectName": "VoiceActedRadioChatter",
-        "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Half-Life-Combine-radio-chatter\\1.3\\Source\\VoiceActedRadioChatter.csproj",
+        "projectPath": "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Half-Life-Combine-radio-chatter\\1.3\\Source\\VoiceActedRadioChatter.csproj",
         "packagesPath": "C:\\Users\\Vova\\.nuget\\packages\\",
-        "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Half-Life-Combine-radio-chatter\\1.3\\Source\\obj\\",
+        "outputPath": "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Half-Life-Combine-radio-chatter\\1.3\\Source\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [

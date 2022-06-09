@@ -558,9 +558,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Half-Life-Combine-radio-chatter\\1.3\\Source\\HalfLifeCombineRadioChatter.csproj",
-      "projectName": "HalfLifeCombineRadioChatter",
-      "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Half-Life-Combine-radio-chatter\\1.3\\Source\\HalfLifeCombineRadioChatter.csproj",
+      "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Half-Life-Combine-radio-chatter\\1.3\\Source\\VoiceActedRadioChatter.csproj",
+      "projectName": "VoiceActedRadioChatter",
+      "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Half-Life-Combine-radio-chatter\\1.3\\Source\\VoiceActedRadioChatter.csproj",
       "packagesPath": "C:\\Users\\Vova\\.nuget\\packages\\",
       "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Half-Life-Combine-radio-chatter\\1.3\\Source\\obj\\",
       "projectStyle": "PackageReference",

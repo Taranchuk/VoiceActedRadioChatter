@@ -2,7 +2,7 @@
 <Defs>
 
 	<SoundDef>
-		<defName>HLCRC_Female2SelectPawnOne</defName>
+		<defName>VARC_Female2SelectPawnOne</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -43,7 +43,7 @@
 	</SoundDef>
 	
 	<SoundDef>
-		<defName>HLCRC_Female2SelectPawnTwo</defName>
+		<defName>VARC_Female2SelectPawnTwo</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -84,7 +84,7 @@
 	</SoundDef>
 	
 	<SoundDef>
-		<defName>HLCRC_Female2AttackOne</defName>
+		<defName>VARC_Female2AttackOne</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -125,7 +125,7 @@
 	</SoundDef>
 	
 	<SoundDef>
-		<defName>HLCRC_Female2AttackTwo</defName>
+		<defName>VARC_Female2AttackTwo</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -166,7 +166,7 @@
 	</SoundDef>
 
 	<SoundDef>
-		<defName>HLCRC_Female2MovingOne</defName>
+		<defName>VARC_Female2MovingOne</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -210,7 +210,7 @@
 	</SoundDef>
 	
 	<SoundDef>
-		<defName>HLCRC_Female2MovingTwo</defName>
+		<defName>VARC_Female2MovingTwo</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -254,7 +254,7 @@
 	</SoundDef>
 	
 	<SoundDef>
-		<defName>HLCRC_Female2PawnIsDownedOne</defName>
+		<defName>VARC_Female2PawnIsDownedOne</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -289,7 +289,7 @@
 	</SoundDef>
 	
 	<SoundDef>
-		<defName>HLCRC_Female2PawnIsDownedTwo</defName>
+		<defName>VARC_Female2PawnIsDownedTwo</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -324,7 +324,7 @@
 	</SoundDef>
 
 	<SoundDef>
-		<defName>HLCRC_Female2ColonistDeathOne</defName>
+		<defName>VARC_Female2ColonistDeathOne</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -359,7 +359,7 @@
 	</SoundDef>
 
 	<SoundDef>
-		<defName>HLCRC_Female2ColonistDeathTwo</defName>
+		<defName>VARC_Female2ColonistDeathTwo</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>

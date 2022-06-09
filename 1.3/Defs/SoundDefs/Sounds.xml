@@ -2,7 +2,7 @@
 <Defs>
 
 	<SoundDef>
-		<defName>HLCRC_FormCaravan</defName>
+		<defName>VARC_FormCaravan</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -20,7 +20,7 @@
 	</SoundDef>
 
 	<SoundDef>
-		<defName>HLCRC_MentalBreak</defName>
+		<defName>VARC_MentalBreak</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -38,7 +38,7 @@
 	</SoundDef>
 
 	<SoundDef>
-		<defName>HLCRC_TransportCrash</defName>
+		<defName>VARC_TransportCrash</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -56,7 +56,7 @@
 	</SoundDef>
 
 	<SoundDef>
-		<defName>HLCRC_Zzzt</defName>
+		<defName>VARC_Zzzt</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -74,7 +74,7 @@
 	</SoundDef>
 
 	<SoundDef>
-		<defName>HLCRC_Arrested</defName>
+		<defName>VARC_Arrested</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -92,7 +92,7 @@
 	</SoundDef>
 
 	<SoundDef>
-		<defName>HLCRC_Betrayal</defName>
+		<defName>VARC_Betrayal</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -110,7 +110,7 @@
 	</SoundDef>
 	
 	<SoundDef>
-		<defName>HLCRC_SolarFlare</defName>
+		<defName>VARC_SolarFlare</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -131,7 +131,7 @@
 	</SoundDef>
 
 	<SoundDef>
-		<defName>HLCRC_ToxicFallout</defName>
+		<defName>VARC_ToxicFallout</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -149,7 +149,7 @@
 	</SoundDef>
 
 	<SoundDef>
-		<defName>HLCRC_ToxicSpewer</defName>
+		<defName>VARC_ToxicSpewer</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -167,7 +167,7 @@
 	</SoundDef>
 	
 	<SoundDef>
-		<defName>HLCRC_WarMusicLoopDropPods</defName>
+		<defName>VARC_WarMusicLoopDropPods</defName>
 		<context>MapOnly</context>
 		<sustain>True</sustain>
 		<maxSimultaneous>1</maxSimultaneous>
@@ -190,7 +190,7 @@
 	</SoundDef>
 	
 	<SoundDef>
-		<defName>HLCRC_HumanRaidEvent</defName>
+		<defName>VARC_HumanRaidEvent</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -211,7 +211,7 @@
 	</SoundDef>
 	
 	<SoundDef>
-		<defName>HLCRC_InfestationEvent</defName>
+		<defName>VARC_InfestationEvent</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -233,7 +233,7 @@
 	</SoundDef>
 	
 	<SoundDef>
-		<defName>HLCRC_WarMusicLoopMechanoidRaid</defName>
+		<defName>VARC_WarMusicLoopMechanoidRaid</defName>
 		<context>MapOnly</context>
 		<sustain>True</sustain>
 		<maxSimultaneous>1</maxSimultaneous>
@@ -267,7 +267,7 @@
 	</SoundDef>
 	
 	<SoundDef>
-		<defName>HLCRC_WarMusicManhunter</defName>
+		<defName>VARC_WarMusicManhunter</defName>
 		<context>MapOnly</context>
 		<sustain>True</sustain>
 		<maxSimultaneous>1</maxSimultaneous>
@@ -289,7 +289,7 @@
 	</SoundDef>
 	
 	<SoundDef>
-		<defName>HLCRC_WarMusicLoopHumanRaid</defName>
+		<defName>VARC_WarMusicLoopHumanRaid</defName>
 		<context>MapOnly</context>
 		<sustain>True</sustain>
 		<maxSimultaneous>1</maxSimultaneous>
@@ -311,7 +311,7 @@
 	</SoundDef>
 	
 	<SoundDef>
-		<defName>HLCRC_WarMusicLoopInfestation</defName>
+		<defName>VARC_WarMusicLoopInfestation</defName>
 		<context>MapOnly</context>
 		<sustain>True</sustain>
 		<maxSimultaneous>1</maxSimultaneous>

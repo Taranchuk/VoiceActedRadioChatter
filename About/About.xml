@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Half-Life Combine radio chatter</name>
+	<name>Voice-Acted Radio Chatter</name>
 	<author>Ouroboros226, Taranchuk</author>
 	<supportedVersions>
       <li>1.3</li>
    </supportedVersions>
-   <packageId>Ouroboros226.HalfLifeCombineRadioChatter</packageId>
+   <packageId>Ouroboros226.VoiceActedRadioChatter</packageId>
    <modDependencies>
 		<li>
 			<packageId>brrainz.harmony</packageId>

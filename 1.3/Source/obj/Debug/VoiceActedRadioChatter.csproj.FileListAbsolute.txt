@@ -1,0 +1,4 @@
+c:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Half-Life-Combine-radio-chatter\1.3\Assemblies\VoiceActedRadioChatter.dll
+c:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Half-Life-Combine-radio-chatter\1.3\Source\obj\Debug\VoiceActedRadioChatter.csproj.AssemblyReference.cache
+c:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Half-Life-Combine-radio-chatter\1.3\Source\obj\Debug\VoiceActedRadioChatter.csproj.CoreCompileInputs.cache
+c:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Half-Life-Combine-radio-chatter\1.3\Source\obj\Debug\VoiceActedRadioChatter.dll

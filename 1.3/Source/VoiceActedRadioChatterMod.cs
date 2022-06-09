@@ -11,7 +11,7 @@ using Verse.AI;
 using Verse.Noise;
 using Verse.Sound;
 
-namespace HalfLifeCombineRadioChatter
+namespace VoiceActedRadioChatter
 {
     public class GameComponent_WarMusic : GameComponent
     {
@@ -58,7 +58,7 @@ namespace HalfLifeCombineRadioChatter
 
         public SoundDef GetBaseSoundDefFor(string defName, Pawn pawn)
         {
-            var combinedDefName = HalfLifeCombineRadioChatterMod.Prefix + HalfLifeCombineRadioChatterMod.GetVoiceFor(pawn) + defName + (Rand.Bool ? "One" : "Two");
+            var combinedDefName = VoiceActedRadioChatterMod.Prefix + VoiceActedRadioChatterMod.GetVoiceFor(pawn) + defName + (Rand.Bool ? "One" : "Two");
             return DefDatabase<SoundDef>.GetNamedSilentFail(combinedDefName);
         }
 
@@ -126,9 +126,9 @@ namespace HalfLifeCombineRadioChatter
     }
 
     [StaticConstructorOnStartup]
-    public static class HalfLifeCombineRadioChatterStartup
+    public static class VoiceActedRadioChatterStartup
     {
-        static HalfLifeCombineRadioChatterStartup()
+        static VoiceActedRadioChatterStartup()
         {
             ApplySettings();
         }
@@ -138,9 +138,9 @@ namespace HalfLifeCombineRadioChatter
             var sounds = DefDatabase<SoundDef>.AllDefsListForReading.ListFullCopy();
             foreach (var sound in sounds)
             {
-                foreach (var disabledActor in HalfLifeCombineRadioChatterSettings.disabledVoiceActors)
+                foreach (var disabledActor in VoiceActedRadioChatterSettings.disabledVoiceActors)
                 {
-                    if (sound.defName.StartsWith(HalfLifeCombineRadioChatterMod.Prefix + disabledActor))
+                    if (sound.defName.StartsWith(VoiceActedRadioChatterMod.Prefix + disabledActor))
                     {
                         DefDatabase<SoundDef>.Remove(sound);
                     }
@@ -148,9 +148,9 @@ namespace HalfLifeCombineRadioChatter
             }
         }
     }
-    public class HalfLifeCombineRadioChatterMod : Mod
+    public class VoiceActedRadioChatterMod : Mod
     {
-        public const string Prefix = "HLCRC_";
+        public const string Prefix = "VARC_";
 
         public static List<string> voiceActors = new List<string>
         {
@@ -167,7 +167,7 @@ namespace HalfLifeCombineRadioChatter
             var availableVoices = new List<string>();
             foreach (var voiceActor in voicePool)
             {
-                if (!HalfLifeCombineRadioChatterSettings.disabledVoiceActors.Contains(voiceActor))
+                if (!VoiceActedRadioChatterSettings.disabledVoiceActors.Contains(voiceActor))
                 {
                     availableVoices.Add(voiceActor);
                 }
@@ -182,11 +182,11 @@ namespace HalfLifeCombineRadioChatter
             return "";
         }
 
-        public static HalfLifeCombineRadioChatterSettings settings;
-        public HalfLifeCombineRadioChatterMod(ModContentPack pack) : base(pack)
+        public static VoiceActedRadioChatterSettings settings;
+        public VoiceActedRadioChatterMod(ModContentPack pack) : base(pack)
         {
-            settings = GetSettings<HalfLifeCombineRadioChatterSettings>();
-            new Harmony("HalfLifeCombineRadioChatter.Mod").PatchAll();
+            settings = GetSettings<VoiceActedRadioChatterSettings>();
+            new Harmony("VoiceActedRadioChatter.Mod").PatchAll();
         }
         public override void DoSettingsWindowContents(Rect inRect)
         {
@@ -201,11 +201,11 @@ namespace HalfLifeCombineRadioChatter
         public override void WriteSettings()
         {
             base.WriteSettings();
-            HalfLifeCombineRadioChatterStartup.ApplySettings();
+            VoiceActedRadioChatterStartup.ApplySettings();
         }
     }
 
-    public class HalfLifeCombineRadioChatterSettings : ModSettings
+    public class VoiceActedRadioChatterSettings : ModSettings
     {
 
         public static List<string> disabledVoiceActors = new List<string>();
@@ -220,7 +220,7 @@ namespace HalfLifeCombineRadioChatter
             Listing_Standard listingStandard = new Listing_Standard();
             listingStandard.Begin(rect);
             listingStandard.Label("HLCRC.EnableDisableVoiceActors".Translate());
-            foreach (var actor in HalfLifeCombineRadioChatterMod.voiceActors)
+            foreach (var actor in VoiceActedRadioChatterMod.voiceActors)
             {
                 var enabled = disabledVoiceActors.Contains(actor) is true;
                 listingStandard.CheckboxLabeled(actor, ref enabled);
@@ -351,7 +351,7 @@ namespace HalfLifeCombineRadioChatter
                     //{
                     //    return;
                     //}
-                    //var def = Rand.Bool ? HL_DefOf.HLCRC_PawnIsHurtOne : HL_DefOf.HLCRC_PawnIsHurtTwo;
+                    //var def = Rand.Bool ? HL_DefOf.VARC_PawnIsHurtOne : HL_DefOf.VARC_PawnIsHurtTwo;
                     //GameComponent_WarMusic.Instance.AddSound(def, 0.2f, Rand.RangeInclusive(2, 4), pawn);
                 }
                 else if (dinfo.Instigator is Pawn attacker && attacker.IsColonist)
@@ -384,7 +384,7 @@ namespace HalfLifeCombineRadioChatter
     //    {
     //        if (___pawn.IsColonist && hediff.TryGetComp<HediffComp_Immunizable>() != null && hediff.def.lethalSeverity >= 1f)
     //        {
-    //            var def = Rand.Bool ? HL_DefOf.HLCRC_PawnGetsInfectionOne : HL_DefOf.HLCRC_PawnGetsInfectionTwo;
+    //            var def = Rand.Bool ? HL_DefOf.VARC_PawnGetsInfectionOne : HL_DefOf.VARC_PawnGetsInfectionTwo;
     //            def.PlayOneShot(___pawn);
     //        }
     //    }
@@ -397,7 +397,7 @@ namespace HalfLifeCombineRadioChatter
         {
             if (__result)
             {
-                HL_DefOf.HLCRC_FormCaravan.PlayOneShotOnCamera();
+                HL_DefOf.VARC_FormCaravan.PlayOneShotOnCamera();
             }
         }
     }
@@ -414,18 +414,18 @@ namespace HalfLifeCombineRadioChatter
                 if (worker is PawnsArrivalModeWorker_CenterDrop || worker is PawnsArrivalModeWorker_EdgeDrop 
                     || worker is PawnsArrivalModeWorker_EdgeDropGroups || worker is PawnsArrivalModeWorker_RandomDrop)
                 {
-                    var sus = HL_DefOf.HLCRC_WarMusicLoopDropPods.TrySpawnSustainer(SoundInfo.OnCamera());
+                    var sus = HL_DefOf.VARC_WarMusicLoopDropPods.TrySpawnSustainer(SoundInfo.OnCamera());
                     comp.AddSustainer(sus);
                 }
                 else
                 {
                     if (parms.faction.def.humanlikeFaction)
                     {
-                        HL_DefOf.HLCRC_HumanRaidEvent.PlayOneShotOnCamera();
+                        HL_DefOf.VARC_HumanRaidEvent.PlayOneShotOnCamera();
                     }
                     else if (parms.faction == Faction.OfMechanoids)
                     {
-                        var sus = HL_DefOf.HLCRC_WarMusicLoopMechanoidRaid.TrySpawnSustainer(SoundInfo.OnCamera());
+                        var sus = HL_DefOf.VARC_WarMusicLoopMechanoidRaid.TrySpawnSustainer(SoundInfo.OnCamera());
                         comp.AddSustainer(sus);
                     }
                 }
@@ -442,13 +442,13 @@ namespace HalfLifeCombineRadioChatter
             {
                 if (__instance.def == HL_DefOf.ProblemCauser)
                 {
-                    var def = HL_DefOf.HLCRC_WarMusicLoopHumanRaid;
+                    var def = HL_DefOf.VARC_WarMusicLoopHumanRaid;
                     var sus = def.TrySpawnSustainer(SoundInfo.OnCamera());
                     GameComponent_WarMusic.Instance.AddSustainer(sus);
                 }
                 else if (__instance.def == HL_DefOf.DefoliatorShipPartCrash)
                 {
-                    var def = HL_DefOf.HLCRC_WarMusicLoopInfestation;
+                    var def = HL_DefOf.VARC_WarMusicLoopInfestation;
                     var sus = def.TrySpawnSustainer(SoundInfo.OnCamera());
                     GameComponent_WarMusic.Instance.AddSustainer(sus);
                 }
@@ -463,7 +463,7 @@ namespace HalfLifeCombineRadioChatter
         {
             if (parms.target is Map map)
             {
-                HL_DefOf.HLCRC_InfestationEvent.PlayOneShotOnCamera();
+                HL_DefOf.VARC_InfestationEvent.PlayOneShotOnCamera();
             }
         }
     }
@@ -474,7 +474,7 @@ namespace HalfLifeCombineRadioChatter
         public static void Postfix(IntVec3 center, Map map, MechClusterSketch sketch, bool dropInPods = true, 
             bool canAssaultColony = false, string questTag = null)
         {
-            var sus = HL_DefOf.HLCRC_WarMusicLoopMechanoidRaid.TrySpawnSustainer(SoundInfo.OnCamera());
+            var sus = HL_DefOf.VARC_WarMusicLoopMechanoidRaid.TrySpawnSustainer(SoundInfo.OnCamera());
             GameComponent_WarMusic.Instance.AddSustainer(sus);
         }
     }
@@ -487,7 +487,7 @@ namespace HalfLifeCombineRadioChatter
         {
             if (__result && ___pawn.IsColonist)
             {
-                HL_DefOf.HLCRC_MentalBreak.PlayOneShotOnCamera();
+                HL_DefOf.VARC_MentalBreak.PlayOneShotOnCamera();
             }
         }
     }
@@ -502,7 +502,7 @@ namespace HalfLifeCombineRadioChatter
                 if (Find.QuestManager.QuestsListForReading.Any(x => x.root == QuestScriptDefOf.RefugeePodCrash 
                     && x.QuestLookTargets.Contains(pawn)))
                 {
-                    HL_DefOf.HLCRC_TransportCrash.PlayOneShotOnCamera();
+                    HL_DefOf.VARC_TransportCrash.PlayOneShotOnCamera();
                 }
             }
         }
@@ -513,7 +513,7 @@ namespace HalfLifeCombineRadioChatter
     //{
     //    public static void Postfix()
     //    {
-    //        HL_DefOf.HLCRC_Zzzt.PlayOneShotOnCamera();
+    //        HL_DefOf.VARC_Zzzt.PlayOneShotOnCamera();
     //    }
     //}
     //
@@ -526,7 +526,7 @@ namespace HalfLifeCombineRadioChatter
             var mapParent = Find.World.worldObjects.ObjectsAt(tile).OfType<MapParent>().FirstOrDefault(x => x.Map != null);
             if (mapParent != null)
             {
-                var sus = HL_DefOf.HLCRC_WarMusicManhunter.TrySpawnSustainer(SoundInfo.OnCamera());
+                var sus = HL_DefOf.VARC_WarMusicManhunter.TrySpawnSustainer(SoundInfo.OnCamera());
                 var comp = GameComponent_WarMusic.Instance;
                 comp.AddSustainer(sus);
             }
@@ -541,15 +541,15 @@ namespace HalfLifeCombineRadioChatter
         {
             if (cond.def == GameConditionDefOf.SolarFlare)
             {
-                HL_DefOf.HLCRC_SolarFlare.PlayOneShotOnCamera();
+                HL_DefOf.VARC_SolarFlare.PlayOneShotOnCamera();
             }
             else if (cond.def == GameConditionDefOf.ToxicFallout)
             {
-                HL_DefOf.HLCRC_ToxicFallout.PlayOneShotOnCamera();
+                HL_DefOf.VARC_ToxicFallout.PlayOneShotOnCamera();
             }
             else if (cond.def == GameConditionDefOf.ToxicFallout)
             {
-                HL_DefOf.HLCRC_ToxicSpewer.PlayOneShotOnCamera();
+                HL_DefOf.VARC_ToxicSpewer.PlayOneShotOnCamera();
             }
         }
     }
@@ -561,7 +561,7 @@ namespace HalfLifeCombineRadioChatter
         {
             if (__result)
             {
-                HL_DefOf.HLCRC_Arrested.PlayOneShotOnCamera();
+                HL_DefOf.VARC_Arrested.PlayOneShotOnCamera();
             }
         }
     }
@@ -573,7 +573,7 @@ namespace HalfLifeCombineRadioChatter
     {
         public static void Postfix(Pawn initiator, ref string letterText, ref string letterLabel, ref LetterDef letterDef)
         {
-            HL_DefOf.HLCRC_Betrayal.PlayOneShotOnCamera();
+            HL_DefOf.VARC_Betrayal.PlayOneShotOnCamera();
         }
     }
 }
