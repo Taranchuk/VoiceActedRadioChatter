@@ -169,8 +169,6 @@ namespace VoiceActedRadioChatter
             "Female13",
             "Female14",
             "Female15",
-            "Female16",
-            "Female17",
             "Male1",
             "Male2",
             "Male3",
@@ -186,6 +184,8 @@ namespace VoiceActedRadioChatter
             "Male13",
             "Male14",
             "Male15",
+            "Male16",
+            "Male17",
         };
 
         public static string GetVoiceFor(Pawn pawn)
