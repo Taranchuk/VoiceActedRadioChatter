@@ -168,7 +168,6 @@ namespace VoiceActedRadioChatter
             "Female12",
             "Female13",
             "Female14",
-            "Female15",
             "Male1",
             "Male2",
             "Male3",
