@@ -7,7 +7,7 @@ using Verse.Sound;
 namespace VoiceActedRadioChatter
 {
     [DefOf]
-    public static class HL_DefOf
+    public static class VARC_DefOf
     {
         public static SoundDef VARC_FormCaravan;
         public static SoundDef VARC_MentalBreak;

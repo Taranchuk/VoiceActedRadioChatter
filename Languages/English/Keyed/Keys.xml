@@ -2,5 +2,7 @@
 <LanguageData>
 
 	<VARC.EnableDisableVoiceActors>Enable/disable voice actors for Unit Responses</VARC.EnableDisableVoiceActors>
+	<VARC.EnableDisableEventSounds>Enable/disable event sounds</VARC.EnableDisableEventSounds>
 	<VARC.CooldownForUnitResponses>Set cooldown values for Unit Responses</VARC.CooldownForUnitResponses>
+	<VARC.RandomizeOrSetVoicesForColonists>Set or randomize voices for colonists</VARC.RandomizeOrSetVoicesForColonists>
 </LanguageData>

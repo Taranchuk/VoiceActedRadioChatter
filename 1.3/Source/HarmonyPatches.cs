@@ -13,8 +13,6 @@ using Verse.Sound;
 
 namespace VoiceActedRadioChatter
 {
-
-
     [HarmonyPatch(typeof(Selector), "SelectInternal")]
     public static class Selector_SelectInternal_Patch
     {
@@ -24,7 +22,7 @@ namespace VoiceActedRadioChatter
             __state = false;
             if (prevFrame != Time.frameCount && obj is Pawn pawn && pawn.IsColonist)
             {
-                if (GameComponent_WarMusic.Instance.CanPlaySound("SelectPawn", pawn, 3))
+                if (GameComponent_WarMusic.Instance.CanPlaySound("SelectPawn", pawn))
                 {
                     playSound = false;
                     __state = true;
@@ -168,7 +166,10 @@ namespace VoiceActedRadioChatter
         {
             if (__result)
             {
-                HL_DefOf.VARC_FormCaravan.PlayOneShotOnCamera();
+                if (!VoiceActedRadioChatterSettings.disabledEventSounds.Contains(VARC_DefOf.VARC_FormCaravan.defName))
+                {
+                    VARC_DefOf.VARC_FormCaravan.PlayOneShotOnCamera();
+                }
             }
         }
     }
@@ -185,19 +186,28 @@ namespace VoiceActedRadioChatter
                 if (worker is PawnsArrivalModeWorker_CenterDrop || worker is PawnsArrivalModeWorker_EdgeDrop
                     || worker is PawnsArrivalModeWorker_EdgeDropGroups || worker is PawnsArrivalModeWorker_RandomDrop)
                 {
-                    var sus = HL_DefOf.VARC_WarMusicLoopDropPods.TrySpawnSustainer(SoundInfo.OnCamera());
-                    comp.AddSustainer(sus);
+                    if (!VoiceActedRadioChatterSettings.disabledEventSounds.Contains(VARC_DefOf.VARC_WarMusicLoopDropPods.defName))
+                    {
+                        var sus = VARC_DefOf.VARC_WarMusicLoopDropPods.TrySpawnSustainer(SoundInfo.OnCamera());
+                        comp.AddSustainer(sus);
+                    }
                 }
                 else
                 {
                     if (parms.faction.def.humanlikeFaction)
                     {
-                        HL_DefOf.VARC_HumanRaidEvent.PlayOneShotOnCamera();
+                        if (!VoiceActedRadioChatterSettings.disabledEventSounds.Contains(VARC_DefOf.VARC_HumanRaidEvent.defName))
+                        {
+                            VARC_DefOf.VARC_HumanRaidEvent.PlayOneShotOnCamera();
+                        }
                     }
                     else if (parms.faction == Faction.OfMechanoids)
                     {
-                        var sus = HL_DefOf.VARC_WarMusicLoopMechanoidRaid.TrySpawnSustainer(SoundInfo.OnCamera());
-                        comp.AddSustainer(sus);
+                        if (!VoiceActedRadioChatterSettings.disabledEventSounds.Contains(VARC_DefOf.VARC_WarMusicLoopMechanoidRaid.defName))
+                        {
+                            var sus = VARC_DefOf.VARC_WarMusicLoopMechanoidRaid.TrySpawnSustainer(SoundInfo.OnCamera());
+                            comp.AddSustainer(sus);
+                        }
                     }
                 }
             }
@@ -211,17 +221,23 @@ namespace VoiceActedRadioChatter
         {
             if (__result && parms.target is Map map)
             {
-                if (__instance.def == HL_DefOf.ProblemCauser)
+                if (__instance.def == VARC_DefOf.ProblemCauser)
                 {
-                    var def = HL_DefOf.VARC_WarMusicLoopHumanRaid;
-                    var sus = def.TrySpawnSustainer(SoundInfo.OnCamera());
-                    GameComponent_WarMusic.Instance.AddSustainer(sus);
+                    if (!VoiceActedRadioChatterSettings.disabledEventSounds.Contains(VARC_DefOf.VARC_WarMusicLoopHumanRaid.defName))
+                    {
+                        var def = VARC_DefOf.VARC_WarMusicLoopHumanRaid;
+                        var sus = def.TrySpawnSustainer(SoundInfo.OnCamera());
+                        GameComponent_WarMusic.Instance.AddSustainer(sus);
+                    }
                 }
-                else if (__instance.def == HL_DefOf.DefoliatorShipPartCrash)
+                else if (__instance.def == VARC_DefOf.DefoliatorShipPartCrash)
                 {
-                    var def = HL_DefOf.VARC_WarMusicLoopInfestation;
-                    var sus = def.TrySpawnSustainer(SoundInfo.OnCamera());
-                    GameComponent_WarMusic.Instance.AddSustainer(sus);
+                    if (!VoiceActedRadioChatterSettings.disabledEventSounds.Contains(VARC_DefOf.VARC_WarMusicLoopInfestation.defName))
+                    {
+                        var def = VARC_DefOf.VARC_WarMusicLoopInfestation;
+                        var sus = def.TrySpawnSustainer(SoundInfo.OnCamera());
+                        GameComponent_WarMusic.Instance.AddSustainer(sus);
+                    }
                 }
             }
         }
@@ -234,7 +250,10 @@ namespace VoiceActedRadioChatter
         {
             if (parms.target is Map map)
             {
-                HL_DefOf.VARC_InfestationEvent.PlayOneShotOnCamera();
+                if (!VoiceActedRadioChatterSettings.disabledEventSounds.Contains(VARC_DefOf.VARC_InfestationEvent.defName))
+                {
+                    VARC_DefOf.VARC_InfestationEvent.PlayOneShotOnCamera();
+                }
             }
         }
     }
@@ -245,8 +264,11 @@ namespace VoiceActedRadioChatter
         public static void Postfix(IntVec3 center, Map map, MechClusterSketch sketch, bool dropInPods = true,
             bool canAssaultColony = false, string questTag = null)
         {
-            var sus = HL_DefOf.VARC_WarMusicLoopMechanoidRaid.TrySpawnSustainer(SoundInfo.OnCamera());
-            GameComponent_WarMusic.Instance.AddSustainer(sus);
+            if (!VoiceActedRadioChatterSettings.disabledEventSounds.Contains(VARC_DefOf.VARC_WarMusicLoopMechanoidRaid.defName))
+            {
+                var sus = VARC_DefOf.VARC_WarMusicLoopMechanoidRaid.TrySpawnSustainer(SoundInfo.OnCamera());
+                GameComponent_WarMusic.Instance.AddSustainer(sus);
+            }
         }
     }
 
@@ -257,7 +279,10 @@ namespace VoiceActedRadioChatter
         {
             if (__result && ___pawn.IsColonist)
             {
-                HL_DefOf.VARC_MentalBreak.PlayOneShotOnCamera();
+                if (!VoiceActedRadioChatterSettings.disabledEventSounds.Contains(VARC_DefOf.VARC_MentalBreak.defName))
+                {
+                    VARC_DefOf.VARC_MentalBreak.PlayOneShotOnCamera();
+                }
             }
         }
     }
@@ -272,7 +297,10 @@ namespace VoiceActedRadioChatter
                 if (Find.QuestManager.QuestsListForReading.Any(x => x.root == QuestScriptDefOf.RefugeePodCrash
                     && x.QuestLookTargets.Contains(pawn)))
                 {
-                    HL_DefOf.VARC_TransportCrash.PlayOneShotOnCamera();
+                    if (!VoiceActedRadioChatterSettings.disabledEventSounds.Contains(VARC_DefOf.VARC_TransportCrash.defName))
+                    {
+                        VARC_DefOf.VARC_TransportCrash.PlayOneShotOnCamera();
+                    }
                 }
             }
         }
@@ -296,9 +324,12 @@ namespace VoiceActedRadioChatter
             var mapParent = Find.World.worldObjects.ObjectsAt(tile).OfType<MapParent>().FirstOrDefault(x => x.Map != null);
             if (mapParent != null)
             {
-                var sus = HL_DefOf.VARC_WarMusicManhunter.TrySpawnSustainer(SoundInfo.OnCamera());
-                var comp = GameComponent_WarMusic.Instance;
-                comp.AddSustainer(sus);
+                if (!VoiceActedRadioChatterSettings.disabledEventSounds.Contains(VARC_DefOf.VARC_WarMusicManhunter.defName))
+                {
+                    var sus = VARC_DefOf.VARC_WarMusicManhunter.TrySpawnSustainer(SoundInfo.OnCamera());
+                    var comp = GameComponent_WarMusic.Instance;
+                    comp.AddSustainer(sus);
+                }
             }
         }
     }
@@ -311,15 +342,24 @@ namespace VoiceActedRadioChatter
         {
             if (cond.def == GameConditionDefOf.SolarFlare)
             {
-                HL_DefOf.VARC_SolarFlare.PlayOneShotOnCamera();
+                if (!VoiceActedRadioChatterSettings.disabledEventSounds.Contains(VARC_DefOf.VARC_SolarFlare.defName))
+                {
+                    VARC_DefOf.VARC_SolarFlare.PlayOneShotOnCamera();
+                }
             }
             else if (cond.def == GameConditionDefOf.ToxicFallout)
             {
-                HL_DefOf.VARC_ToxicFallout.PlayOneShotOnCamera();
+                if (!VoiceActedRadioChatterSettings.disabledEventSounds.Contains(VARC_DefOf.VARC_ToxicFallout.defName))
+                {
+                    VARC_DefOf.VARC_ToxicFallout.PlayOneShotOnCamera();
+                }
             }
             else if (cond.def == GameConditionDefOf.ToxicFallout)
             {
-                HL_DefOf.VARC_ToxicSpewer.PlayOneShotOnCamera();
+                if (!VoiceActedRadioChatterSettings.disabledEventSounds.Contains(VARC_DefOf.VARC_ToxicSpewer.defName))
+                {
+                    VARC_DefOf.VARC_ToxicSpewer.PlayOneShotOnCamera();
+                }
             }
         }
     }
@@ -331,7 +371,10 @@ namespace VoiceActedRadioChatter
         {
             if (__result)
             {
-                HL_DefOf.VARC_Arrested.PlayOneShotOnCamera();
+                if (!VoiceActedRadioChatterSettings.disabledEventSounds.Contains(VARC_DefOf.VARC_Arrested.defName))
+                {
+                    VARC_DefOf.VARC_Arrested.PlayOneShotOnCamera();
+                }
             }
         }
     }
@@ -343,7 +386,10 @@ namespace VoiceActedRadioChatter
     {
         public static void Postfix(Pawn initiator, ref string letterText, ref string letterLabel, ref LetterDef letterDef)
         {
-            HL_DefOf.VARC_Betrayal.PlayOneShotOnCamera();
+            if (!VoiceActedRadioChatterSettings.disabledEventSounds.Contains(VARC_DefOf.VARC_Betrayal.defName))
+            {
+                VARC_DefOf.VARC_Betrayal.PlayOneShotOnCamera();
+            }
         }
     }
 }

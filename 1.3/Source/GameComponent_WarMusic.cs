@@ -25,11 +25,12 @@ namespace VoiceActedRadioChatter
                 return seconds;
             }
         }
-        public bool CanPlaySound(string defName, Pawn pawn, int secondsCooldown)
+        public bool CanPlaySound(string defName, Pawn pawn)
         {
             var def = GetBaseSoundDefFor(defName, pawn);
             if (def != null)
             {
+                var secondsCooldown = VoiceActedRadioChatterMod.GetCooldownSecondsFor(defName);
                 return CanPlaySound(def, secondsCooldown);
             }
             return false;
@@ -57,11 +58,14 @@ namespace VoiceActedRadioChatter
 
         public void AddSound(string defName, Pawn pawn, float chance, Thing source)
         {
-            var def = GetBaseSoundDefFor(defName, pawn);
-            if (def != null)
+            if (!VoiceActedRadioChatterSettings.disabledUnitResponses.Contains(defName))
             {
-                var secondsCooldown = VoiceActedRadioChatterMod.GetCooldownSecondsFor(defName);
-                AddSound(defName, def, chance, secondsCooldown, source);
+                var def = GetBaseSoundDefFor(defName, pawn);
+                if (def != null)
+                {
+                    var secondsCooldown = VoiceActedRadioChatterMod.GetCooldownSecondsFor(defName);
+                    AddSound(defName, def, chance, secondsCooldown, source);
+                }
             }
         }
         private void AddSound(string baseDefName, SoundDef soundDef, float chance, int secondsCooldown, Thing source)

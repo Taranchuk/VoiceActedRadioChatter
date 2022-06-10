@@ -17,6 +17,25 @@ namespace VoiceActedRadioChatter
     [StaticConstructorOnStartup]
     public static class VoiceActedRadioChatterStartup
     {
+        public static List<SoundDef> eventSounds = new List<SoundDef>
+        {
+            VARC_DefOf.VARC_FormCaravan,
+            VARC_DefOf.VARC_MentalBreak,
+            VARC_DefOf.VARC_TransportCrash,
+            VARC_DefOf.VARC_Zzzt,
+            VARC_DefOf.VARC_SolarFlare,
+            VARC_DefOf.VARC_Arrested,
+            VARC_DefOf.VARC_Betrayal,
+            VARC_DefOf.VARC_HumanRaidEvent,
+            VARC_DefOf.VARC_InfestationEvent,
+            VARC_DefOf.VARC_WarMusicManhunter,
+            VARC_DefOf.VARC_ToxicSpewer,
+            VARC_DefOf.VARC_ToxicFallout,
+            VARC_DefOf.VARC_WarMusicLoopDropPods,
+            VARC_DefOf.VARC_WarMusicLoopHumanRaid,
+            VARC_DefOf.VARC_WarMusicLoopInfestation,
+            VARC_DefOf.VARC_WarMusicLoopMechanoidRaid,
+        };
         static VoiceActedRadioChatterStartup()
         {
             ApplySettings();
@@ -111,8 +130,18 @@ namespace VoiceActedRadioChatter
             "Male17",
         };
 
+        public static List<string> unitResponses = new List<string>
+        {
+            SelectPawn,
+            Attack,
+            Moving,
+            PawnIsDowned,
+            HittingOrDowningEnemy,
+            ColonistDeath
+        };
+
         public const string SelectPawn = "SelectPawn";
-        public const string Attack = "SelectPawn";
+        public const string Attack = "Attack";
         public const string Moving = "Moving";
         public const string PawnIsDowned = "PawnIsDowned";
         public const string HittingOrDowningEnemy = "HittingOrDowningEnemy";
@@ -124,24 +153,25 @@ namespace VoiceActedRadioChatter
 
         public static string GetVoiceFor(Pawn pawn)
         {
-            var gender = pawn.gender == Gender.Male ? "Male" : "Female";
-            var voicePool = voiceActors.Where(x => x.StartsWith(gender)).ToList();
-            var availableVoices = new List<string>();
-            foreach (var voiceActor in voicePool)
+            if (VoiceActedRadioChatterSettings.fixedVoicesForPawns.TryGetValue(pawn.Name.ToStringFull, out var voice))
             {
-                if (!VoiceActedRadioChatterSettings.disabledVoiceActors.Contains(voiceActor))
-                {
-                    availableVoices.Add(voiceActor);
-                }
+                return voice;
             }
+            var voicePool = GetVoicePool(pawn);
             Rand.PushState(pawn.thingIDNumber);
-            if (availableVoices.TryRandomElement(out var voice))
+            if (voicePool.TryRandomElement(out voice))
             {
                 Rand.PopState();
                 return voice;
             }
             Rand.PopState();
             return "";
+        }
+
+        public static List<string> GetVoicePool(Pawn pawn)
+        {
+            var gender = pawn.gender == Gender.Male ? "Male" : "Female";
+            return voiceActors.Where(x => x.StartsWith(gender) && !VoiceActedRadioChatterSettings.disabledVoiceActors.Contains(x)).ToList();
         }
 
         public static VoiceActedRadioChatterSettings settings;
@@ -166,6 +196,4 @@ namespace VoiceActedRadioChatter
             VoiceActedRadioChatterStartup.ApplySettings();
         }
     }
-
-
 }
