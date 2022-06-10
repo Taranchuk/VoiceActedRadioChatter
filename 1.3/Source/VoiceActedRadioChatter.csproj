@@ -41,9 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HarmonyPatches.cs" />
+    <Compile Include="GameComponent_WarMusic.cs" />
     <Compile Include="HL_DefOf.cs" />
     <Compile Include="VoiceActedRadioChatterMod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VoiceActedRadioChatterSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Publicizer">

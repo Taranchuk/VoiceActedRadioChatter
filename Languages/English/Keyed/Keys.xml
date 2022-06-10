@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-	<HLCRC.EnableDisableVoiceActors>Enable/disable voice actors for Unit Responses</HLCRC.EnableDisableVoiceActors>
-
+	<VARC.EnableDisableVoiceActors>Enable/disable voice actors for Unit Responses</VARC.EnableDisableVoiceActors>
+	<VARC.CooldownForUnitResponses>Set cooldown values for Unit Responses</VARC.CooldownForUnitResponses>
 </LanguageData>
