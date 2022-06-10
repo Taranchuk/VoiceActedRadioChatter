@@ -2,7 +2,7 @@
 <Defs>
 
 	<SoundDef>
-		<defName>VARC_Female1SelectPawnOne</defName>
+		<defName>VARC_Male16SelectPawnOne</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -18,28 +18,22 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/SelectPawn1</clipPath>
+						<clipPath>UnitResponse/Male16/SelectPawn1</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/SelectPawn2</clipPath>
+						<clipPath>UnitResponse/Male16/SelectPawn2</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/SelectPawn3</clipPath>
+						<clipPath>UnitResponse/Male16/SelectPawn3</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/SelectPawn4</clipPath>
+						<clipPath>UnitResponse/Male16/SelectPawn4</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/SelectPawn5</clipPath>
+						<clipPath>UnitResponse/Male16/SelectPawn5</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/SelectPawn6</clipPath>
-					</li>
-					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/SelectPawn7</clipPath>
-					</li>
-					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/SelectPawn8</clipPath>
+						<clipPath>UnitResponse/Male16/SelectPawn6</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -58,7 +52,7 @@
 	</SoundDef>
 	
 	<SoundDef>
-		<defName>VARC_Female1SelectPawnTwo</defName>
+		<defName>VARC_Male16SelectPawnTwo</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -74,28 +68,22 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/SelectPawn1</clipPath>
+						<clipPath>UnitResponse/Male16/SelectPawn1</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/SelectPawn2</clipPath>
+						<clipPath>UnitResponse/Male16/SelectPawn2</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/SelectPawn3</clipPath>
+						<clipPath>UnitResponse/Male16/SelectPawn3</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/SelectPawn4</clipPath>
+						<clipPath>UnitResponse/Male16/SelectPawn4</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/SelectPawn5</clipPath>
+						<clipPath>UnitResponse/Male16/SelectPawn5</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/SelectPawn6</clipPath>
-					</li>
-					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/SelectPawn7</clipPath>
-					</li>
-					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/SelectPawn8</clipPath>
+						<clipPath>UnitResponse/Male16/SelectPawn6</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -114,7 +102,7 @@
 	</SoundDef>
 	
 	<SoundDef>
-		<defName>VARC_Female1AttackOne</defName>
+		<defName>VARC_Male16AttackOne</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -130,19 +118,16 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/Attack1</clipPath>
+						<clipPath>UnitResponse/Male16/Attack1</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/Attack2</clipPath>
+						<clipPath>UnitResponse/Male16/Attack2</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/Attack3</clipPath>
+						<clipPath>UnitResponse/Male16/Attack3</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/Attack4</clipPath>
-					</li>
-					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/Attack5</clipPath>
+						<clipPath>UnitResponse/Male16/Attack4</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -161,7 +146,7 @@
 	</SoundDef>
 	
 	<SoundDef>
-		<defName>VARC_Female1AttackTwo</defName>
+		<defName>VARC_Male16AttackTwo</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -177,19 +162,16 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/Attack1</clipPath>
+						<clipPath>UnitResponse/Male16/Attack1</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/Attack2</clipPath>
+						<clipPath>UnitResponse/Male16/Attack2</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/Attack3</clipPath>
+						<clipPath>UnitResponse/Male16/Attack3</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/Attack4</clipPath>
-					</li>
-					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/Attack5</clipPath>
+						<clipPath>UnitResponse/Male16/Attack4</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -208,7 +190,7 @@
 	</SoundDef>
 
 	<SoundDef>
-		<defName>VARC_Female1MovingOne</defName>
+		<defName>VARC_Male16MovingOne</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -224,25 +206,19 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/Moving1</clipPath>
+						<clipPath>UnitResponse/Male16/Moving1</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/Moving2</clipPath>
+						<clipPath>UnitResponse/Male16/Moving2</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/Moving3</clipPath>
+						<clipPath>UnitResponse/Male16/Moving3</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/Moving4</clipPath>
+						<clipPath>UnitResponse/Male16/Moving4</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/Moving5</clipPath>
-					</li>
-					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/Moving6</clipPath>
-					</li>
-					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/Moving7</clipPath>
+						<clipPath>UnitResponse/Male16/Moving5</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -261,7 +237,7 @@
 	</SoundDef>
 	
 	<SoundDef>
-		<defName>VARC_Female1MovingTwo</defName>
+		<defName>VARC_Male16MovingTwo</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -277,25 +253,19 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/Moving1</clipPath>
+						<clipPath>UnitResponse/Male16/Moving1</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/Moving2</clipPath>
+						<clipPath>UnitResponse/Male16/Moving2</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/Moving3</clipPath>
+						<clipPath>UnitResponse/Male16/Moving3</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/Moving4</clipPath>
+						<clipPath>UnitResponse/Male16/Moving4</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/Moving5</clipPath>
-					</li>
-					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/Moving6</clipPath>
-					</li>
-					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/Moving7</clipPath>
+						<clipPath>UnitResponse/Male16/Moving5</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -314,7 +284,7 @@
 	</SoundDef>
 	
 	<SoundDef>
-		<defName>VARC_Female1PawnIsDownedOne</defName>
+		<defName>VARC_Male16PawnIsDownedOne</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -330,13 +300,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/PawnIsDowned1</clipPath>
-					</li>
-					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/PawnIsDowned2</clipPath>
-					</li>
-					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/PawnIsDowned3</clipPath>
+						<clipPath>UnitResponse/Male16/PawnIsDowned1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -355,7 +319,7 @@
 	</SoundDef>
 	
 	<SoundDef>
-		<defName>VARC_Female1PawnIsDownedTwo</defName>
+		<defName>VARC_Male16PawnIsDownedTwo</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -371,13 +335,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/PawnIsDowned1</clipPath>
-					</li>
-					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/PawnIsDowned2</clipPath>
-					</li>
-					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/PawnIsDowned3</clipPath>
+						<clipPath>UnitResponse/Male16/PawnIsDowned1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -396,7 +354,7 @@
 	</SoundDef>
 	
 	<SoundDef>
-		<defName>VARC_Female1HittingOrDowningEnemyOne</defName>
+		<defName>VARC_Male16HittingOrDowningEnemyOne</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -412,16 +370,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/HittingOrDowningEnemy1</clipPath>
-					</li>
-					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/HittingOrDowningEnemy2</clipPath>
-					</li>
-					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/HittingOrDowningEnemy3</clipPath>
-					</li>
-					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/HittingOrDowningEnemy4</clipPath>
+						<clipPath>UnitResponse/Male16/HittingOrDowningEnemy1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -440,7 +389,7 @@
 	</SoundDef>
 
 	<SoundDef>
-		<defName>VARC_Female1HittingOrDowningEnemyTwo</defName>
+		<defName>VARC_Male16HittingOrDowningEnemyTwo</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -456,16 +405,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/HittingOrDowningEnemy1</clipPath>
-					</li>
-					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/HittingOrDowningEnemy2</clipPath>
-					</li>
-					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/HittingOrDowningEnemy3</clipPath>
-					</li>
-					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/HittingOrDowningEnemy4</clipPath>
+						<clipPath>UnitResponse/Male16/HittingOrDowningEnemy1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -484,7 +424,7 @@
 	</SoundDef>
 
 	<SoundDef>
-		<defName>VARC_Female1ColonistDeathOne</defName>
+		<defName>VARC_Male16ColonistDeathOne</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -500,13 +440,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/ColonistDeath1</clipPath>
-					</li>
-					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/ColonistDeath2</clipPath>
-					</li>
-					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/ColonistDeath3</clipPath>
+						<clipPath>UnitResponse/Male16/ColonistDeath1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -525,7 +459,7 @@
 	</SoundDef>
 
 	<SoundDef>
-		<defName>VARC_Female1ColonistDeathTwo</defName>
+		<defName>VARC_Male16ColonistDeathTwo</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -541,13 +475,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/ColonistDeath1</clipPath>
-					</li>
-					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/ColonistDeath2</clipPath>
-					</li>
-					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1/ColonistDeath3</clipPath>
+						<clipPath>UnitResponse/Male16/ColonistDeath1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
