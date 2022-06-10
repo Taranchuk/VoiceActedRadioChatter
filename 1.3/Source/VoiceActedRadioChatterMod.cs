@@ -58,32 +58,53 @@ namespace VoiceActedRadioChatter
             if (VoiceActedRadioChatterSettings.cooldownSecondsBySounds is null)
             {
                 VoiceActedRadioChatterSettings.cooldownSecondsBySounds = new Dictionary<string, CooldownValue>();
-                VoiceActedRadioChatterSettings.cooldownSecondsBySounds[VoiceActedRadioChatterMod.SelectPawn] = new CooldownValue
+            }
+
+            var cooldown = VoiceActedRadioChatterSettings.cooldownSecondsBySounds;
+            if (!cooldown.ContainsKey(VoiceActedRadioChatterMod.SelectPawn))
+            {
+                cooldown[VoiceActedRadioChatterMod.SelectPawn] = new CooldownValue
                 {
                     min = 1,
                     max = 3
                 };
-                VoiceActedRadioChatterSettings.cooldownSecondsBySounds[VoiceActedRadioChatterMod.Attack] = new CooldownValue
+            }
+            if (!cooldown.ContainsKey(VoiceActedRadioChatterMod.Attack))
+            {
+                cooldown[VoiceActedRadioChatterMod.Attack] = new CooldownValue
                 {
                     min = 1,
                     max = 3
                 };
-                VoiceActedRadioChatterSettings.cooldownSecondsBySounds[VoiceActedRadioChatterMod.Moving] = new CooldownValue
+            }
+            if (!cooldown.ContainsKey(VoiceActedRadioChatterMod.Moving))
+            {
+                cooldown[VoiceActedRadioChatterMod.Moving] = new CooldownValue
                 {
                     min = 1,
                     max = 3
                 };
-                VoiceActedRadioChatterSettings.cooldownSecondsBySounds[VoiceActedRadioChatterMod.PawnIsDowned] = new CooldownValue
+            }
+            if (!cooldown.ContainsKey(VoiceActedRadioChatterMod.PawnIsDowned))
+            {
+                cooldown[VoiceActedRadioChatterMod.PawnIsDowned] = new CooldownValue
                 {
                     min = 0,
                     max = 0
                 };
-                VoiceActedRadioChatterSettings.cooldownSecondsBySounds[VoiceActedRadioChatterMod.ColonistDeath] = new CooldownValue
+            }
+
+            if (!cooldown.ContainsKey(VoiceActedRadioChatterMod.ColonistDeath))
+            {
+                cooldown[VoiceActedRadioChatterMod.ColonistDeath] = new CooldownValue
                 {
                     min = 0,
                     max = 0
                 };
-                VoiceActedRadioChatterSettings.cooldownSecondsBySounds[VoiceActedRadioChatterMod.HittingOrDowningEnemy] = new CooldownValue
+            }
+            if (!cooldown.ContainsKey(VoiceActedRadioChatterMod.HittingOrDowningEnemy))
+            {
+                cooldown[VoiceActedRadioChatterMod.HittingOrDowningEnemy] = new CooldownValue
                 {
                     min = 5,
                     max = 7
