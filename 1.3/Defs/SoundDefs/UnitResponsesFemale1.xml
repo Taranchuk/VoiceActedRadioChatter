@@ -18,19 +18,19 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/SelectPawn1</clipPath>
+						<clipPath>UnitResponse/Female1/SelectPawn1</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/SelectPawn2</clipPath>
+						<clipPath>UnitResponse/Female1/SelectPawn2</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/SelectPawn3</clipPath>
+						<clipPath>UnitResponse/Female1/SelectPawn3</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/SelectPawn4</clipPath>
+						<clipPath>UnitResponse/Female1/SelectPawn4</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/SelectPawn5</clipPath>
+						<clipPath>UnitResponse/Female1/SelectPawn5</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -65,19 +65,19 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/SelectPawn1</clipPath>
+						<clipPath>UnitResponse/Female1/SelectPawn1</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/SelectPawn2</clipPath>
+						<clipPath>UnitResponse/Female1/SelectPawn2</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/SelectPawn3</clipPath>
+						<clipPath>UnitResponse/Female1/SelectPawn3</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/SelectPawn4</clipPath>
+						<clipPath>UnitResponse/Female1/SelectPawn4</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/SelectPawn5</clipPath>
+						<clipPath>UnitResponse/Female1/SelectPawn5</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -112,19 +112,19 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/Attack1</clipPath>
+						<clipPath>UnitResponse/Female1/Attack1</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/Attack2</clipPath>
+						<clipPath>UnitResponse/Female1/Attack2</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/Attack3</clipPath>
+						<clipPath>UnitResponse/Female1/Attack3</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/Attack4</clipPath>
+						<clipPath>UnitResponse/Female1/Attack4</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/Attack5</clipPath>
+						<clipPath>UnitResponse/Female1/Attack5</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -159,19 +159,19 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/Attack1</clipPath>
+						<clipPath>UnitResponse/Female1/Attack1</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/Attack2</clipPath>
+						<clipPath>UnitResponse/Female1/Attack2</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/Attack3</clipPath>
+						<clipPath>UnitResponse/Female1/Attack3</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/Attack4</clipPath>
+						<clipPath>UnitResponse/Female1/Attack4</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/Attack5</clipPath>
+						<clipPath>UnitResponse/Female1/Attack5</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -206,19 +206,19 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/Moving1</clipPath>
+						<clipPath>UnitResponse/Female1/Moving1</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/Moving2</clipPath>
+						<clipPath>UnitResponse/Female1/Moving2</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/Moving3</clipPath>
+						<clipPath>UnitResponse/Female1/Moving3</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/Moving4</clipPath>
+						<clipPath>UnitResponse/Female1/Moving4</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/Moving5</clipPath>
+						<clipPath>UnitResponse/Female1/Moving5</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -253,19 +253,19 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/Moving1</clipPath>
+						<clipPath>UnitResponse/Female1/Moving1</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/Moving2</clipPath>
+						<clipPath>UnitResponse/Female1/Moving2</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/Moving3</clipPath>
+						<clipPath>UnitResponse/Female1/Moving3</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/Moving4</clipPath>
+						<clipPath>UnitResponse/Female1/Moving4</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/Moving5</clipPath>
+						<clipPath>UnitResponse/Female1/Moving5</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -300,7 +300,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/PawnIsDowned1</clipPath>
+						<clipPath>UnitResponse/Female1/PawnIsDowned1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -335,7 +335,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/PawnIsDowned1</clipPath>
+						<clipPath>UnitResponse/Female1/PawnIsDowned1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -370,7 +370,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/ColonistDeath1</clipPath>
+						<clipPath>UnitResponse/Female1/ColonistDeath1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -405,7 +405,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Female1Voice/ColonistDeath1</clipPath>
+						<clipPath>UnitResponse/Female1/ColonistDeath1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>

@@ -18,16 +18,16 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male8Voice/SelectPawn1</clipPath>
+						<clipPath>UnitResponse/Male8/SelectPawn1</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male8Voice/SelectPawn2</clipPath>
+						<clipPath>UnitResponse/Male8/SelectPawn2</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male8Voice/SelectPawn3</clipPath>
+						<clipPath>UnitResponse/Male8/SelectPawn3</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male8Voice/SelectPawn4</clipPath>
+						<clipPath>UnitResponse/Male8/SelectPawn4</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -62,16 +62,16 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male8Voice/SelectPawn1</clipPath>
+						<clipPath>UnitResponse/Male8/SelectPawn1</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male8Voice/SelectPawn2</clipPath>
+						<clipPath>UnitResponse/Male8/SelectPawn2</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male8Voice/SelectPawn3</clipPath>
+						<clipPath>UnitResponse/Male8/SelectPawn3</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male8Voice/SelectPawn4</clipPath>
+						<clipPath>UnitResponse/Male8/SelectPawn4</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -106,10 +106,10 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male8Voice/Attack1</clipPath>
+						<clipPath>UnitResponse/Male8/Attack1</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male8Voice/Attack2</clipPath>
+						<clipPath>UnitResponse/Male8/Attack2</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -144,10 +144,10 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male8Voice/Attack1</clipPath>
+						<clipPath>UnitResponse/Male8/Attack1</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male8Voice/Attack2</clipPath>
+						<clipPath>UnitResponse/Male8/Attack2</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -182,13 +182,13 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male8Voice/Moving1</clipPath>
+						<clipPath>UnitResponse/Male8/Moving1</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male8Voice/Moving2</clipPath>
+						<clipPath>UnitResponse/Male8/Moving2</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male8Voice/Moving3</clipPath>
+						<clipPath>UnitResponse/Male8/Moving3</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -223,13 +223,13 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male8Voice/Moving1</clipPath>
+						<clipPath>UnitResponse/Male8/Moving1</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male8Voice/Moving2</clipPath>
+						<clipPath>UnitResponse/Male8/Moving2</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male8Voice/Moving3</clipPath>
+						<clipPath>UnitResponse/Male8/Moving3</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -264,7 +264,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male8Voice/PawnIsDowned1</clipPath>
+						<clipPath>UnitResponse/Male8/PawnIsDowned1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -299,7 +299,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male8Voice/PawnIsDowned1</clipPath>
+						<clipPath>UnitResponse/Male8/PawnIsDowned1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -334,7 +334,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male8Voice/HittingOrDowningEnemy1</clipPath>
+						<clipPath>UnitResponse/Male8/HittingOrDowningEnemy1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -369,7 +369,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male8Voice/HittingOrDowningEnemy1</clipPath>
+						<clipPath>UnitResponse/Male8/HittingOrDowningEnemy1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -404,7 +404,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male8Voice/ColonistDeath1</clipPath>
+						<clipPath>UnitResponse/Male8/ColonistDeath1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
@@ -439,7 +439,7 @@
 			<li>
 				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>UnitResponse/Male8Voice/ColonistDeath1</clipPath>
+						<clipPath>UnitResponse/Male8/ColonistDeath1</clipPath>
 					</li>
 				</grains>
 				<volumeRange>42</volumeRange>
