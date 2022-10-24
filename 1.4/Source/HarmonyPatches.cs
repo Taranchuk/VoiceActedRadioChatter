@@ -2,10 +2,7 @@
 using RimWorld;
 using RimWorld.Planet;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 using Verse.AI;
@@ -34,7 +31,7 @@ namespace VoiceActedRadioChatter
         {
             if (__state)
             {
-                var pawn = obj as Pawn;
+                Pawn pawn = obj as Pawn;
                 GameComponent_WarMusic.Instance.AddSound(VoiceActedRadioChatterMod.SelectPawn, pawn, 1f, pawn);
             }
         }
@@ -48,7 +45,7 @@ namespace VoiceActedRadioChatter
         {
             if (prevFrame != Time.frameCount && __result != null && pawn.IsColonist)
             {
-                var storedAction = __result;
+                Action storedAction = __result;
                 __result = delegate
                 {
                     GameComponent_WarMusic.Instance.AddSound(VoiceActedRadioChatterMod.Attack, pawn, 1f, pawn);
@@ -67,7 +64,7 @@ namespace VoiceActedRadioChatter
         {
             if (prevFrame != Time.frameCount && __result != null && pawn.IsColonist)
             {
-                var storedAction = __result;
+                Action storedAction = __result;
                 __result = delegate
                 {
                     GameComponent_WarMusic.Instance.AddSound(VoiceActedRadioChatterMod.Attack, pawn, 1f, pawn);
@@ -179,16 +176,16 @@ namespace VoiceActedRadioChatter
     {
         public static void Postfix(IncidentParms parms)
         {
-            if (parms.faction != null && parms.faction.HostileTo(Faction.OfPlayer) && parms.target is Map map)
+            if (parms.faction != null && parms.faction.HostileTo(Faction.OfPlayer) && parms.target is Map)
             {
-                var comp = GameComponent_WarMusic.Instance;
-                var worker = parms.raidArrivalMode.Worker;
+                GameComponent_WarMusic comp = GameComponent_WarMusic.Instance;
+                PawnsArrivalModeWorker worker = parms.raidArrivalMode.Worker;
                 if (worker is PawnsArrivalModeWorker_CenterDrop || worker is PawnsArrivalModeWorker_EdgeDrop
                     || worker is PawnsArrivalModeWorker_EdgeDropGroups || worker is PawnsArrivalModeWorker_RandomDrop)
                 {
                     if (!VoiceActedRadioChatterSettings.disabledEventSounds.Contains(VARC_DefOf.VARC_WarMusicLoopDropPods.defName))
                     {
-                        var sus = VARC_DefOf.VARC_WarMusicLoopDropPods.TrySpawnSustainer(SoundInfo.OnCamera());
+                        Sustainer sus = VARC_DefOf.VARC_WarMusicLoopDropPods.TrySpawnSustainer(SoundInfo.OnCamera());
                         comp.AddSustainer(sus);
                     }
                 }
@@ -205,7 +202,7 @@ namespace VoiceActedRadioChatter
                     {
                         if (!VoiceActedRadioChatterSettings.disabledEventSounds.Contains(VARC_DefOf.VARC_WarMusicLoopMechanoidRaid.defName))
                         {
-                            var sus = VARC_DefOf.VARC_WarMusicLoopMechanoidRaid.TrySpawnSustainer(SoundInfo.OnCamera());
+                            Sustainer sus = VARC_DefOf.VARC_WarMusicLoopMechanoidRaid.TrySpawnSustainer(SoundInfo.OnCamera());
                             comp.AddSustainer(sus);
                         }
                     }
@@ -219,14 +216,14 @@ namespace VoiceActedRadioChatter
     {
         private static void Postfix(IncidentWorker __instance, IncidentParms parms, bool __result)
         {
-            if (__result && parms.target is Map map)
+            if (__result && parms.target is Map)
             {
                 if (__instance.def == VARC_DefOf.ProblemCauser)
                 {
                     if (!VoiceActedRadioChatterSettings.disabledEventSounds.Contains(VARC_DefOf.VARC_WarMusicLoopHumanRaid.defName))
                     {
-                        var def = VARC_DefOf.VARC_WarMusicLoopHumanRaid;
-                        var sus = def.TrySpawnSustainer(SoundInfo.OnCamera());
+                        SoundDef def = VARC_DefOf.VARC_WarMusicLoopHumanRaid;
+                        Sustainer sus = def.TrySpawnSustainer(SoundInfo.OnCamera());
                         GameComponent_WarMusic.Instance.AddSustainer(sus);
                     }
                 }
@@ -234,8 +231,8 @@ namespace VoiceActedRadioChatter
                 {
                     if (!VoiceActedRadioChatterSettings.disabledEventSounds.Contains(VARC_DefOf.VARC_WarMusicLoopInfestation.defName))
                     {
-                        var def = VARC_DefOf.VARC_WarMusicLoopInfestation;
-                        var sus = def.TrySpawnSustainer(SoundInfo.OnCamera());
+                        SoundDef def = VARC_DefOf.VARC_WarMusicLoopInfestation;
+                        Sustainer sus = def.TrySpawnSustainer(SoundInfo.OnCamera());
                         GameComponent_WarMusic.Instance.AddSustainer(sus);
                     }
                 }
@@ -248,7 +245,7 @@ namespace VoiceActedRadioChatter
     {
         public static void Postfix(IncidentParms parms)
         {
-            if (parms.target is Map map)
+            if (parms.target is Map)
             {
                 if (!VoiceActedRadioChatterSettings.disabledEventSounds.Contains(VARC_DefOf.VARC_InfestationEvent.defName))
                 {
@@ -266,7 +263,7 @@ namespace VoiceActedRadioChatter
         {
             if (!VoiceActedRadioChatterSettings.disabledEventSounds.Contains(VARC_DefOf.VARC_WarMusicLoopMechanoidRaid.defName))
             {
-                var sus = VARC_DefOf.VARC_WarMusicLoopMechanoidRaid.TrySpawnSustainer(SoundInfo.OnCamera());
+                Sustainer sus = VARC_DefOf.VARC_WarMusicLoopMechanoidRaid.TrySpawnSustainer(SoundInfo.OnCamera());
                 GameComponent_WarMusic.Instance.AddSustainer(sus);
             }
         }
@@ -277,7 +274,7 @@ namespace VoiceActedRadioChatter
     {
         private static void Postfix(MentalStateHandler __instance, Pawn ___pawn, bool __result, MentalStateDef stateDef, string reason = null, bool forceWake = false, bool causedByMood = false, Pawn otherPawn = null, bool transitionSilently = false)
         {
-            if (__result && ___pawn.IsColonist)
+            if (__result && ___pawn.IsColonist && ___pawn.DevelopmentalStage == DevelopmentalStage.Adult)
             {
                 if (!VoiceActedRadioChatterSettings.disabledEventSounds.Contains(VARC_DefOf.VARC_MentalBreak.defName))
                 {
@@ -321,13 +318,13 @@ namespace VoiceActedRadioChatter
     {
         public static void Postfix(PawnKindDef animalKind, int tile, float points, int animalCount = 0)
         {
-            var mapParent = Find.World.worldObjects.ObjectsAt(tile).OfType<MapParent>().FirstOrDefault(x => x.Map != null);
+            MapParent mapParent = Find.World.worldObjects.ObjectsAt(tile).OfType<MapParent>().FirstOrDefault(x => x.Map != null);
             if (mapParent != null)
             {
                 if (!VoiceActedRadioChatterSettings.disabledEventSounds.Contains(VARC_DefOf.VARC_WarMusicManhunter.defName))
                 {
-                    var sus = VARC_DefOf.VARC_WarMusicManhunter.TrySpawnSustainer(SoundInfo.OnCamera());
-                    var comp = GameComponent_WarMusic.Instance;
+                    Sustainer sus = VARC_DefOf.VARC_WarMusicManhunter.TrySpawnSustainer(SoundInfo.OnCamera());
+                    GameComponent_WarMusic comp = GameComponent_WarMusic.Instance;
                     comp.AddSustainer(sus);
                 }
             }
