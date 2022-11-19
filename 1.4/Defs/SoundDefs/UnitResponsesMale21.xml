@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<SoundDef>
+		<defName>VARC_Male21SelectPawnOne</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/On1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/SelectPawn1</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/SelectPawn2</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/SelectPawn3</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/SelectPawn4</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Off1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>VARC_Male21SelectPawnTwo</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/On2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/SelectPawn1</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/SelectPawn2</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/SelectPawn3</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/SelectPawn4</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Off2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>VARC_Male21AttackOne</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/On1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/Attack1</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/Attack2</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/Attack3</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Off1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>VARC_Male21AttackTwo</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/On2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/Attack1</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/Attack2</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/Attack3</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Off2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>VARC_Male21MovingOne</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/On1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/Moving1</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/Moving2</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/Moving3</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/Moving4</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Off1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>VARC_Male21MovingTwo</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/On2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/Moving1</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/Moving2</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/Moving3</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/Moving4</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Off2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>VARC_Male21PawnIsDownedOne</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/On1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/PawnIsDowned1</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/PawnIsDowned2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Off1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>VARC_Male21PawnIsDownedTwo</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/On2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/PawnIsDowned1</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/PawnIsDowned2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Off2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>VARC_Male21HittingOrDowningEnemyOne</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/On1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/HittingOrDowningEnemy1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Off1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>VARC_Male21HittingOrDowningEnemyTwo</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/On2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Male21/HittingOrDowningEnemy1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>UnitResponse/Off2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>42</volumeRange>
+				<distRange>20~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+</Defs>

@@ -42,7 +42,7 @@
             },
             "Krafs.Rimworld.Ref": {
               "target": "Package",
-              "version": "[1.4.3525, )"
+              "version": "[1.4.3551-beta, )"
             },
             "Lib.Harmony": {
               "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
